@@ -1,8 +1,12 @@
+import { Fragment } from "react";
+
+import Hero from "./components/hero/Hero";
+
 function App() {
     return (
-        <div className="App">
-            <h1>A healthy meal delivered to your door, every single day</h1>
-        </div>
+        <Fragment>
+            <Hero />
+        </Fragment>
     );
 }
 
