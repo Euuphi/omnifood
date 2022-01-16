@@ -36,37 +36,37 @@ const Hero = () => {
                         <div className={styles.deliveredMeals}>
                             <div className={styles.deliveredImages}>
                                 <img
+                                    className={styles.customerImage}
                                     src={customerOne}
-                                    class={styles.customerImage}
                                     alt="Customer 1"
                                 />
                                 <img
+                                    className={styles.customerImage}
                                     src={customerTwo}
-                                    class={styles.customerImage}
                                     alt="Customer 2"
                                 />
                                 <img
+                                    className={styles.customerImage}
                                     src={customerThree}
-                                    class={styles.customerImage}
                                     alt="Customer 3"
                                 />
                                 <img
+                                    className={styles.customerImage}
                                     src={customerFour}
-                                    class={styles.customerImage}
                                     alt="Customer 4"
                                 />
                                 <img
+                                    className={styles.customerImage}
                                     src={customerFive}
-                                    class={styles.customerImage}
                                     alt="Customer 5"
                                 />
                                 <img
+                                    className={styles.customerImage}
                                     src={customerSix}
-                                    class={styles.customerImage}
                                     alt="Customer 6"
                                 />
                             </div>
-                            <p class={styles.deliveredText}>
+                            <p className={styles.deliveredText}>
                                 <span>250,000+ </span>
                                 meals delivered last year!
                             </p>
