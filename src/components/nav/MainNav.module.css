@@ -11,3 +11,39 @@
 .logo {
     height: 2.2rem;
 }
+
+.mainNavList {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.mainNavLink:link,
+.mainNavLink:visited {
+    color: #333;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.mainNavLink:hover,
+.mainNavLink:active {
+    color: #cf711f;
+}
+
+.navCta.mainNavLink:link,
+.navCta.mainNavLink:visited {
+    background-color: #e67e22;
+    border-radius: 9px;
+    color: #fff;
+    padding: 1.2rem 2.4rem;
+}
+
+.navCta.mainNavLink:hover,
+.navCta.mainNavLink:active {
+    background-color: #cf711f;
+}
