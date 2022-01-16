@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
-import MainNav from "./components/nav/MainNav";
-import Hero from "./components/hero/Hero";
+import MainNav from "./components/Nav/MainNav";
+import Hero from "./components/Hero/Hero";
 
 function App() {
     return (
