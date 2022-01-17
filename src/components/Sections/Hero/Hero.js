@@ -11,8 +11,10 @@ import customerSix from "../../../images/customers/customer-6.jpg";
 
 // Styles
 import styles from "./Hero.module.css";
+
 import Container from "../../Layout/Container";
 import Grid from "../../Layout/Grid";
+import HeadingPrimary from "../../Headings/HeadingPrimary";
 
 const Hero = () => {
     return (
@@ -21,11 +23,10 @@ const Hero = () => {
                 <Container maxWidth={130}>
                     <Grid col={2} alignItems="center">
                         <div className={styles.heroTextBox}>
-                            {/* TODO: Extract into reusable component */}
-                            <h1 className={`heading-primary`}>
-                                A healthy meal delivered to your door, every
-                                single day
-                            </h1>
+                            <HeadingPrimary
+                                text="A healthy meal delivered to your door, every
+                                single day"
+                            />
                             <p className={styles.heroDescription}>
                                 The smart 365-days-per-year food subscription
                                 that will make you eat healthy again. Tailored
