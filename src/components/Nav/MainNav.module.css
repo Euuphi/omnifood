@@ -37,7 +37,7 @@
 
 .navCta.mainNavLink:link,
 .navCta.mainNavLink:visited {
-    background-color: #e67e22;
+    background-color: var(--color-primary);
     border-radius: 9px;
     color: #fff;
     padding: 1.2rem 2.4rem;
