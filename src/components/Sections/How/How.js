@@ -9,7 +9,7 @@ import styles from "./How.module.css";
 
 const How = () => {
     return (
-        <secton className={styles.sectionHow}>
+        <section className={styles.sectionHow}>
             <Container>
                 <span className={styles.subheading}>How it works</span>
                 {/* TODO: Extract to reusable component */}
@@ -40,7 +40,7 @@ const How = () => {
                     />
                 </div>
             </Container>
-        </secton>
+        </section>
     );
 };
 
