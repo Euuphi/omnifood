@@ -24,8 +24,8 @@ const Hero = () => {
                     <Grid col={2} alignItems="center">
                         <div className={styles.heroTextBox}>
                             <HeadingPrimary>
-                                "A healthy meal delivered to your door, every
-                                single day"
+                                A healthy meal delivered to your door, every
+                                single day
                             </HeadingPrimary>
                             <p className={styles.heroDescription}>
                                 The smart 365-days-per-year food subscription
