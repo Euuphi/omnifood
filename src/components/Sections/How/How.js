@@ -15,12 +15,13 @@ import Container from "../../Layout/Container";
 import Step from "./Step";
 
 import HeadingSecondary from "../../Headings/HeadingSecondary";
+import Subheading from "../../Headings/Subheading";
 
 const How = () => {
     return (
         <section className={styles.sectionHow}>
             <Container>
-                <span className={styles.subheading}>How it works</span>
+                <Subheading>How it works</Subheading>
                 <HeadingSecondary>
                     Your daily dose of health in 3 simple steps
                 </HeadingSecondary>

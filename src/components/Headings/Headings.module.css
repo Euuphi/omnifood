@@ -14,6 +14,7 @@
 .headingSecondary {
     font-size: 4.4rem;
     line-height: 1.2;
+    margin-bottom: 9.6rem;
 }
 
 .headingTertiary {
@@ -22,6 +23,9 @@
 .subheading {
     color: var(--color-shade);
     display: block;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 500;
+    letter-spacing: 0.75px;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
 }
