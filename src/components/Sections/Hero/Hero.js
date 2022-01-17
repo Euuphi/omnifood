@@ -23,10 +23,10 @@ const Hero = () => {
                 <Container maxWidth={130}>
                     <Grid col={2} alignItems="center">
                         <div className={styles.heroTextBox}>
-                            <HeadingPrimary
-                                text="A healthy meal delivered to your door, every
+                            <HeadingPrimary>
+                                "A healthy meal delivered to your door, every
                                 single day"
-                            />
+                            </HeadingPrimary>
                             <p className={styles.heroDescription}>
                                 The smart 365-days-per-year food subscription
                                 that will make you eat healthy again. Tailored
