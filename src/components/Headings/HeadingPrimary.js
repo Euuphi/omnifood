@@ -1,9 +1,9 @@
 import React from "react";
 
-import styles from "./HeadingPrimary.module.css";
+import styles from "./Headings.module.css";
 
-const HeadingPrimary = ({ text }) => {
-    return <h1 className={styles.headingPrimary}>{text}</h1>;
+const HeadingPrimary = ({ children }) => {
+    return <h1 className={styles.headingPrimary}>{children}</h1>;
 };
 
 export default HeadingPrimary;
