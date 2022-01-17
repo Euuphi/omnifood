@@ -21,6 +21,7 @@ const Hero = () => {
                 <Container maxWidth={130}>
                     <Grid col={2} alignItems="center">
                         <div className={styles.heroTextBox}>
+                            {/* TODO: Extract into reusable component */}
                             <h1 className={`heading-primary`}>
                                 A healthy meal delivered to your door, every
                                 single day
@@ -30,6 +31,7 @@ const Hero = () => {
                                 that will make you eat healthy again. Tailored
                                 to your personal tastes and nutritional needs.
                             </p>
+                            {/* TODO: Extract into reusable component */}
                             <a
                                 href="#"
                                 className={`btn btn--full margin-right-sm`}>
