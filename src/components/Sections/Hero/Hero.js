@@ -1,18 +1,18 @@
 import React from "react";
 
 // Images
-import hero from "../../images/hero.png";
-import customerOne from "../../images/customers/customer-1.jpg";
-import customerTwo from "../../images/customers/customer-2.jpg";
-import customerThree from "../../images/customers/customer-3.jpg";
-import customerFour from "../../images/customers/customer-4.jpg";
-import customerFive from "../../images/customers/customer-5.jpg";
-import customerSix from "../../images/customers/customer-6.jpg";
+import hero from "../../../images/hero.png";
+import customerOne from "../../../images/customers/customer-1.jpg";
+import customerTwo from "../../../images/customers/customer-2.jpg";
+import customerThree from "../../../images/customers/customer-3.jpg";
+import customerFour from "../../../images/customers/customer-4.jpg";
+import customerFive from "../../../images/customers/customer-5.jpg";
+import customerSix from "../../../images/customers/customer-6.jpg";
 
 // Styles
 import styles from "./Hero.module.css";
-import Container from "../Layout/Container";
-import Grid from "../Layout/Grid";
+import Container from "../../Layout/Container";
+import Grid from "../../Layout/Grid";
 
 const Hero = () => {
     return (
