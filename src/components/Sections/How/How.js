@@ -1,45 +1,55 @@
 import React from "react";
-import Container from "../../Layout/Container";
 
 // Images
 import appScreenOne from "../../../images/app/app-screen-1.png";
+import appScreenTwo from "../../../images/app/app-screen-2.png";
+import appScreenThree from "../../../images/app/app-screen-3.png";
+
+// Data
+import { stepDescriptions } from "./stepDescriptions";
 
 // Stylesheets
 import styles from "./How.module.css";
+
+import Container from "../../Layout/Container";
+import Step from "./Step";
+
+import HeadingSecondary from "../../Headings/HeadingSecondary";
 
 const How = () => {
     return (
         <section className={styles.sectionHow}>
             <Container>
                 <span className={styles.subheading}>How it works</span>
-                {/* TODO: Extract to reusable component */}
-                <h2 className={`heading-secondary`}>
-                    Your daily dose of health in 3 simple steps
-                </h2>
+                <HeadingSecondary text="Your daily dose of health in 3 simple steps" />
             </Container>
-            <Container>
-                <div className={styles.stepTextBox}>
-                    <p className={styles.stepNumber}>01</p>
-                    {/* TODO: Extract to reusable component */}
-                    <h3 className={`heading-tertiary`}>
-                        Tell us what you like (and what not)
-                    </h3>
-                    <p className={styles.stepDescription}>
-                        Never again waste time thinking about what to eat!
-                        Omnifood AI will create a 100% personalized weekly meal
-                        plan just for you. It makes sure you get all the
-                        nutrients and vitamins you need, no matter what diet you
-                        follow!
-                    </p>
-                </div>
-                <div className={styles.stepImageBox}>
-                    <img
-                        className={styles.stepImage}
-                        src={appScreenOne}
-                        alt="iPhone app preferences selection screen"
-                    />
-                </div>
-            </Container>
+
+            <Step
+                stepNumber="01"
+                imageSide="right"
+                imageSrc={appScreenOne}
+                imageAlt="iPhone app preferences selection screen"
+                heading="Tell us what you like (and what not)"
+                description={stepDescriptions[0]}
+            />
+
+            <Step
+                stepNumber="02"
+                imageSide="left"
+                imageSrc={appScreenTwo}
+                imageAlt=""
+                heading="Approve your weekly meal plan"
+                description={stepDescriptions[1]}
+            />
+
+            <Step
+                stepNumber="03"
+                imageSide="right"
+                imageSrc={appScreenThree}
+                imageAlt=""
+                heading="Receive meals at convenient time"
+                description={stepDescriptions[2]}
+            />
         </section>
     );
 };
