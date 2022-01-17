@@ -21,7 +21,9 @@ const How = () => {
         <section className={styles.sectionHow}>
             <Container>
                 <span className={styles.subheading}>How it works</span>
-                <HeadingSecondary text="Your daily dose of health in 3 simple steps" />
+                <HeadingSecondary>
+                    Your daily dose of health in 3 simple steps
+                </HeadingSecondary>
             </Container>
 
             <Step
