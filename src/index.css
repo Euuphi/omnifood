@@ -71,6 +71,10 @@ body {
     line-height: 1;
 }
 
+strong {
+    font-weight: 500;
+}
+
 .btn:link,
 .btn:visited {
     border-radius: 9px;
