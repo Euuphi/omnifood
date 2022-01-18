@@ -1,5 +1,9 @@
 import React from "react";
 
+// Images
+import jpGyozas from "../../../images/meals/meal-1.jpg";
+import avocadoSalad from "../../../images/meals/meal-2.jpg";
+
 // Stylesheets
 import styles from "./Meals.module.css";
 
@@ -18,7 +22,26 @@ const Meals = () => {
             />
             <Container>
                 <Grid col={3}>
-                    <MealCard />
+                    <MealCard
+                        imageSrc={jpGyozas}
+                        imageAlt="Japanese Gyozas"
+                        tags={["Vegetarian"]}
+                        title="Japanese Gyozas"
+                        calories={650}
+                        nutriscore={74}
+                        rating={4.9}
+                        reviews={537}
+                    />
+                    <MealCard
+                        imageSrc={avocadoSalad}
+                        imageAlt="Avacado Salad"
+                        tags={["Vegan", "Paleo"]}
+                        title="Avacado Salad"
+                        calories={400}
+                        nutriscord={92}
+                        rating={4.8}
+                        reviews={441}
+                    />
                 </Grid>
             </Container>
         </section>
