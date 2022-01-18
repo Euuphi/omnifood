@@ -2,6 +2,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.stepImageBox::after,
+.stepImageBox::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.stepImageBox::before {
+    background-color: #fdf2e9;
+    /* Padding is used to set height of element */
+    padding-bottom: 60%;
+    width: 60%;
+    z-index: -2;
+}
+
+.stepImageBox::after {
+    background-color: #fae5d3;
+    /* Padding is used to set height of element */
+    padding-bottom: 45%;
+    width: 45%;
+    z-index: -1;
 }
 
 .stepImage {
