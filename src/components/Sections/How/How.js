@@ -12,21 +12,17 @@ import { stepDescriptions } from "./stepDescriptions";
 import styles from "./How.module.css";
 
 // Components
-import Container from "../../Layout/Container";
 import Flex from "../../Layout/Flex";
-import HeadingSecondary from "../../Headings/HeadingSecondary";
+import SectionHeading from "../../Headings/SectionHeading";
 import Step from "./Step";
-import Subheading from "../../Headings/Subheading";
 
 const How = () => {
     return (
         <section className={styles.sectionHow}>
-            <Container>
-                <Subheading>How it works</Subheading>
-                <HeadingSecondary>
-                    Your daily dose of health in 3 simple steps
-                </HeadingSecondary>
-            </Container>
+            <SectionHeading
+                subheading="How it works"
+                secondaryHeading="Your daily dose of health in 3 simple steps"
+            />
 
             <Flex flexDirection="column">
                 <Step
