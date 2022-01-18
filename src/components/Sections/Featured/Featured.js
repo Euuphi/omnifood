@@ -10,6 +10,7 @@ import newYorkTimes from "../../../images/logos/the-new-york-times.png";
 import techCrunch from "../../../images/logos/techcrunch.png";
 import usaToday from "../../../images/logos/usa-today.png";
 
+// Components
 import Container from "../../Layout/Container";
 
 const Featured = () => {

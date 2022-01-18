@@ -1,10 +1,12 @@
 import React from "react";
 
+// Stylesheets
+import styles from "./Step.module.css";
+
+// Components
 import Container from "../../Layout/Container";
 import Grid from "../../Layout/Grid";
 import HeadingTertiary from "../../Headings/HeadingTertiary";
-
-import styles from "./Step.module.css";
 
 /**
  * Two column grid for displaying image and some text

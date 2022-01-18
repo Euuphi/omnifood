@@ -11,12 +11,12 @@ import { stepDescriptions } from "./stepDescriptions";
 // Stylesheets
 import styles from "./How.module.css";
 
+// Components
 import Container from "../../Layout/Container";
-import Step from "./Step";
-
-import HeadingSecondary from "../../Headings/HeadingSecondary";
-import Subheading from "../../Headings/Subheading";
 import Flex from "../../Layout/Flex";
+import HeadingSecondary from "../../Headings/HeadingSecondary";
+import Step from "./Step";
+import Subheading from "../../Headings/Subheading";
 
 const How = () => {
     return (

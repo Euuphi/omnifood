@@ -12,6 +12,7 @@ import customerSix from "../../../images/customers/customer-6.jpg";
 // Styles
 import styles from "./Hero.module.css";
 
+// Components
 import Container from "../../Layout/Container";
 import Grid from "../../Layout/Grid";
 import HeadingPrimary from "../../Headings/HeadingPrimary";
