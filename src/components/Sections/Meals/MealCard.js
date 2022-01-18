@@ -11,6 +11,8 @@ import { FlameOutline, RestaurantOutline, StarOutline } from "react-ionicons";
 import styles from "./MealCard.module.css";
 
 const MealCard = () => {
+    const colorPrimary = "#e67e22";
+
     return (
         <div className={styles.meal}>
             <img
@@ -22,16 +24,22 @@ const MealCard = () => {
             <p className={styles.mealTitle}>Japanese Gyozas</p>
             <ul className={styles.mealAttributeList}>
                 <li className={styles.mealAttribute}>
-                    <FlameOutline />
-                    <span>650 calories</span>
+                    <FlameOutline color={colorPrimary} height="2.4rem" />
+                    <span>
+                        <strong>650</strong> calories
+                    </span>
                 </li>
                 <li className={styles.mealAttribute}>
-                    <RestaurantOutline />
-                    <span>NutriScore &reg; 74</span>
+                    <RestaurantOutline color={colorPrimary} height="2.4rem" />
+                    <span>
+                        NutriScore &reg; <strong>74</strong>
+                    </span>
                 </li>
                 <li className={styles.mealAttribute}>
-                    <StarOutline />
-                    <span>4.9 rating (537)</span>
+                    <StarOutline color={colorPrimary} height="2.4rem" />
+                    <span>
+                        <strong>4.9</strong> rating (537)
+                    </span>
                 </li>
             </ul>
         </div>
