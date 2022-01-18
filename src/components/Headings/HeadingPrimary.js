@@ -1,5 +1,6 @@
 import React from "react";
 
+// Stylesheets
 import styles from "./Headings.module.css";
 
 const HeadingPrimary = ({ children }) => {

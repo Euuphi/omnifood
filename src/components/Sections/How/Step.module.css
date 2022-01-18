@@ -1,3 +1,9 @@
 .stepImage {
     width: 50%;
 }
+
+.stepNumber {
+    color: #ddd;
+    font-size: 8.6rem;
+    font-weight: 600;
+}

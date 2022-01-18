@@ -37,7 +37,7 @@ const Step = ({
                 {imageSide === "left" && imageBox}
                 <div className={styles.stepTextBox}>
                     <p className={styles.stepNumber}>{stepNumber}</p>
-                    <HeadingTertiary text={heading} />
+                    <HeadingTertiary>{heading}</HeadingTertiary>
                     <p className={styles.stepDescription}>{description}</p>
                 </div>
                 {imageSide === "right" && imageBox}
