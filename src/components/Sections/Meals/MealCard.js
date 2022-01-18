@@ -4,6 +4,9 @@ import React from "react";
 import mealOne from "../../../images/meals/meal-1.jpg";
 import mealTwo from "../../../images/meals/meal-2.jpg";
 
+// Icons
+import { FlameOutline, RestaurantOutline, StarOutline } from "react-ionicons";
+
 // Stylesheets
 import styles from "./MealCard.module.css";
 
@@ -18,9 +21,18 @@ const MealCard = () => {
             <span className={styles.tag}>Vegetartian</span>
             <p className={styles.mealTitle}>Japanese Gyozas</p>
             <ul className={styles.mealAttributeList}>
-                <li className={styles.mealAttribute}>650 calories</li>
-                <li className={styles.mealAttribute}>NutriScore &reg; 74</li>
-                <li className={styles.mealAttribute}>4.9 rating (537)</li>
+                <li className={styles.mealAttribute}>
+                    <FlameOutline />
+                    <span>650 calories</span>
+                </li>
+                <li className={styles.mealAttribute}>
+                    <RestaurantOutline />
+                    <span>NutriScore &reg; 74</span>
+                </li>
+                <li className={styles.mealAttribute}>
+                    <StarOutline />
+                    <span>4.9 rating (537)</span>
+                </li>
             </ul>
         </div>
     );
