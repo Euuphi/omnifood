@@ -1,9 +1,20 @@
+.stepImageBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .stepImage {
-    width: 50%;
+    width: 35%;
 }
 
 .stepNumber {
     color: #ddd;
     font-size: 8.6rem;
     font-weight: 600;
+}
+
+.stepDescription {
+    font-size: 1.8rem;
+    line-height: 1.8;
 }
