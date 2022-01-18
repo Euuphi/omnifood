@@ -35,15 +35,28 @@
 }
 
 .tagList {
+    display: flex;
+    gap: 0.4rem;
     margin-bottom: 1.2rem;
 }
 
 .tag {
-    background-color: #51cf66;
     border-radius: 100px;
     display: inline-block;
     font-size: 1.2rem;
     font-weight: 600;
     padding: 0.4rem 0.8rem;
     text-transform: uppercase;
+}
+
+.tagVegetarian {
+    background-color: #51cf66;
+}
+
+.tagPaleo {
+    background-color: #94d82d;
+}
+
+.tagVegan {
+    background-color: #ffd43b;
 }

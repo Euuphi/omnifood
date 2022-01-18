@@ -1,8 +1,5 @@
 import React from "react";
 
-// Images
-import mealOne from "../../../images/meals/meal-1.jpg";
-
 // Icons
 import { FlameOutline, RestaurantOutline, StarOutline } from "react-ionicons";
 
@@ -34,17 +31,24 @@ const MealCard = ({
 }) => {
     const colorPrimary = "#e67e22";
 
+    // Mapping function for list of tags
+    // TODO: Possible refactor on how tag color is choosen
+    const mapTags = (tag) => {
+        let tagClass;
+
+        // Choose which background color to use depending on what tag to display
+        if (tag === "Vegetarian") tagClass = styles.tagVegetarian;
+        else if (tag === "Vegan") tagClass = styles.tagVegan;
+        else if (tag === "Paleo") tagClass = styles.tagPaleo;
+
+        return <span className={`${styles.tag} ${tagClass}`}>{tag}</span>;
+    };
+
     return (
         <div className={styles.meal}>
             <img className={styles.mealImage} src={imageSrc} alt={imageAlt} />
             <div className={styles.mealContent}>
-                {tags.map((tag) => {
-                    return (
-                        <div className={styles.tagList}>
-                            <span className={styles.tag}>{tag}</span>
-                        </div>
-                    );
-                })}
+                <div className={styles.tagList}>{tags.map(mapTags)}</div>
                 <p className={styles.mealTitle}>{title}</p>
                 <ul className={styles.mealAttributeList}>
                     <li className={styles.mealAttribute}>
