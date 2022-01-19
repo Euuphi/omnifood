@@ -21,7 +21,7 @@ const Hero = () => {
     return (
         <main>
             <section className={styles.sectionHero}>
-                <Container maxWidth={130}>
+                <Container maxWidth="130rem">
                     <Grid col={2} alignItems="center">
                         <div className={styles.heroTextBox}>
                             <HeadingPrimary>
