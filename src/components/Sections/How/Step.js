@@ -19,6 +19,7 @@ import HeadingTertiary from "../../Headings/HeadingTertiary";
  * @param {string} stepNumber - Number of current step
  * @return {*}
  */
+
 const Step = ({
     imageSide,
     imageSrc,

@@ -9,6 +9,7 @@ import React from "react";
  * @param {number} gap - Value of gap property (in rem) - Default: 9.6rem
  * @return {*}
  */
+
 const Flex = ({ children, flexDirection, alignItems, justifyContent, gap }) => {
     const flexStyles = {
         display: "flex",

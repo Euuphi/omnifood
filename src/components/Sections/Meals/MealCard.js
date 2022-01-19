@@ -19,6 +19,7 @@ import styles from "./MealCard.module.css";
  * @param {number} reviews - Number of reviews
  * @return {*}
  */
+
 const MealCard = ({
     imageSrc,
     imageAlt,
