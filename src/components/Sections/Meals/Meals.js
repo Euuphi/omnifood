@@ -13,15 +13,17 @@ import Grid from "../../Layout/Grid";
 import SectionHeading from "../../Headings/SectionHeading";
 import MealCard from "./MealCard";
 import DietList from "./DietList";
+import Link from "../../UI/Link";
 
 const Meals = () => {
     return (
         <section className={styles.sectionMeals}>
             <SectionHeading
+                className={styles.mealsHeading}
                 subheading="Meals"
                 secondaryHeading="Omnifood AI chooses from 5,000+ recipes"
             />
-            <Container>
+            <Container marginBottom="4.8rem">
                 <Grid col={3}>
                     <MealCard
                         imageSrc={jpGyozas}
@@ -45,6 +47,9 @@ const Meals = () => {
                     />
                     <DietList />
                 </Grid>
+            </Container>
+            <Container className={styles.allRecipes}>
+                <Link>See more recipes</Link>
             </Container>
         </section>
     );
