@@ -36,7 +36,7 @@ const Step = ({
 
     return (
         <Container>
-            <Grid col={2} gap={6.4}>
+            <Grid col={2} gap="6.4rem">
                 {imageSide === "left" && imageBox}
                 <div className={styles.stepTextBox}>
                     <p className={styles.stepNumber}>{stepNumber}</p>

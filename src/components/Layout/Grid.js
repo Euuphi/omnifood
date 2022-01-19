@@ -5,7 +5,7 @@ import React from "react";
  *
  * @param {number} col - Number of columns
  * @param {number} row - Number of rows
- * @param {number} gap - Value of gap property (in rem) - Default: 9.6rem
+ * @param {string} gap - Value of gap property - Default: 9.6rem
  * @return {*}
  */
 
@@ -14,7 +14,7 @@ const Grid = ({ children, col, row, gap, alignItems, justifyContent }) => {
     const gridStyles = {
         display: "grid",
         alignItems,
-        gap: `${gap}rem`,
+        gap,
         gridTemplateColumns: `repeat(${col}, 1fr)`,
         gridTemplateRows: `repeat(${row}, 1fr)`,
         justifyContent,
@@ -26,7 +26,7 @@ const Grid = ({ children, col, row, gap, alignItems, justifyContent }) => {
 Grid.defaultProps = {
     alignItems: "stretch",
     justifyContent: "start",
-    gap: 9.6,
+    gap: "9.6rem",
     row: 1,
 };
 
