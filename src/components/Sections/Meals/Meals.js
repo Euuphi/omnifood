@@ -12,6 +12,7 @@ import Container from "../../Layout/Container";
 import Grid from "../../Layout/Grid";
 import SectionHeading from "../../Headings/SectionHeading";
 import MealCard from "./MealCard";
+import DietList from "./DietList";
 
 const Meals = () => {
     return (
@@ -42,6 +43,7 @@ const Meals = () => {
                         rating={4.8}
                         reviews={441}
                     />
+                    <DietList />
                 </Grid>
             </Container>
         </section>
