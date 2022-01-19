@@ -1,0 +1,16 @@
+.testimonialImage {
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+    width: 6.4rem;
+}
+
+.testimonialText {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 1.6rem;
+}
+
+.testimonialName {
+    color: #777;
+    font-size: 1.6rem;
+}
