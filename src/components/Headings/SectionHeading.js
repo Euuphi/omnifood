@@ -8,13 +8,14 @@ import HeadingSecondary from "./HeadingSecondary";
 /**
  * Heading for start of page section
  *
+ * @param {string} className - Additional classes for container
  * @param {string} subheading - Subheading text
  * @param {string} secondaryHeading  - Secondary heading text
  * @return {*}
  */
-const SectionHeading = ({ subheading, secondaryHeading }) => {
+const SectionHeading = ({ className, subheading, secondaryHeading }) => {
     return (
-        <Container>
+        <Container className={className}>
             <Subheading>{subheading}</Subheading>
             <HeadingSecondary>{secondaryHeading}</HeadingSecondary>
         </Container>
