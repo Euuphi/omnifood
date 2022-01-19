@@ -3,8 +3,8 @@ import React from "react";
 /**
  * Create a basic grid container
  *
- * @param {number} col - Number of columns
- * @param {number} row - Number of rows
+ * @param {number|string} col - Input number to specify evenly fractioned columns or input string to specify value for grid-template-column property
+ * @param {number|string} row - Input number to specify evenly fractioned rows or input string to specify value for grid-template-row property
  * @param {string} gap - Value of gap property - Default: "9.6rem"
  * @param {string} alignItems - Value of align-items - Default: "stretch"
  * @param {string} justifyContent - Value of justify-content - Default: "start"
@@ -21,13 +21,16 @@ const Grid = ({
     justifyContent,
     padding,
 }) => {
+    const colTemplate = isNaN(col) ? col : `repeat(${col}, 1fr)`;
+    const rowTemplate = isNaN(row) ? row : `repeat(${row}, 1fr)`;
+
     //Stylesheet
     const gridStyles = {
         display: "grid",
         alignItems,
         gap,
-        gridTemplateColumns: `repeat(${col}, 1fr)`,
-        gridTemplateRows: `repeat(${row}, 1fr)`,
+        gridTemplateColumns: colTemplate,
+        gridTemplateRows: rowTemplate,
         justifyContent,
         padding,
     };
