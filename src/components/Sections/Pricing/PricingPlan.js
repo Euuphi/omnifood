@@ -8,24 +8,33 @@ import Button from "../../UI/Button";
 import List from "../../UI/List";
 import ListItem from "../../UI/ListItem";
 
-const PricingPlan = () => {
+/**
+ * Pricing plan card component
+ *
+ * @param {string} name - Plan name
+ * @param {number} price - Plan price
+ * @param {string} text - Additional text for plan
+ * @param {string[]} details - Array of details to display in list
+ * @return {*}
+ */
+
+const PricingPlan = ({ name, price, text, details }) => {
     return (
         <div className={styles.pricingPlan}>
-            <p className={styles.planName}>Starter</p>
+            <p className={styles.planName}>{name}</p>
             <p className={styles.planprice}>
-                <span>$</span>399
+                <span>$</span>
+                {price}
             </p>
-            <p className={styles.planText}>per month. Only $13 per meal</p>
+            <p className={styles.planText}>{text}</p>
             <List>
-                <ListItem>
-                    <span>1 meal per day</span>
-                </ListItem>
-                <ListItem>
-                    <span>Order times are between 11am and 9pm</span>
-                </ListItem>
-                <ListItem>
-                    <span>Delivery is free</span>
-                </ListItem>
+                {details.map((detail) => {
+                    return (
+                        <ListItem>
+                            <span>{detail}</span>
+                        </ListItem>
+                    );
+                })}
             </List>
             <Button href="#" text="Start eating well" />
         </div>
