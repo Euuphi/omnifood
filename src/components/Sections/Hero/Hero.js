@@ -16,6 +16,7 @@ import styles from "./Hero.module.css";
 import Container from "../../Layout/Container";
 import Grid from "../../Layout/Grid";
 import HeadingPrimary from "../../Headings/HeadingPrimary";
+import Button from "../../UI/Button";
 
 const Hero = () => {
     return (
@@ -34,14 +35,17 @@ const Hero = () => {
                                 to your personal tastes and nutritional needs.
                             </p>
                             {/* TODO: Extract into reusable component */}
-                            <a
+                            <Button
                                 href="#"
-                                className={`btn btn--full margin-right-sm`}>
-                                Start eating well
-                            </a>
-                            <a href="#" className={`btn btn--outline`}>
-                                Learn more &darr;
-                            </a>
+                                className="margin-right-sm"
+                                text="Start eating well"
+                            />
+                            <Button
+                                href="#"
+                                className="margin-right-sm"
+                                outline
+                                text="Learn more &darr;"
+                            />
                             <div className={styles.deliveredMeals}>
                                 <div className={styles.deliveredImages}>
                                     <img

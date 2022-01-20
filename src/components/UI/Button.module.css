@@ -1,0 +1,33 @@
+.btn:link,
+.btn:visited {
+    border-radius: 9px;
+    color: #fff;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+.btnFull:link,
+.btnFull:visited {
+    background-color: var(--color-primary);
+}
+
+.btnFull:hover,
+.btnFull:active {
+    background-color: #cf711f;
+}
+
+.btnOutline:link,
+.btnOutline:visited {
+    background-color: #fff;
+    color: #555;
+}
+
+.btnOutline:hover,
+.btnOutline:active {
+    background-color: #fdf2e9;
+    box-shadow: inset 0 0 0 3px #fff;
+}
