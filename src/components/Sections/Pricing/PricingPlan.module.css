@@ -1,0 +1,39 @@
+.planHeader {
+    margin-bottom: 4.8rem;
+    text-align: center;
+}
+
+.planName {
+    color: var(--color-shade);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.75;
+    margin-bottom: 3.2rem;
+    text-transform: uppercase;
+}
+
+.planPrice {
+    color: #333;
+    font-size: 6.2rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planPrice span {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.planText {
+    color: #6f6f6f;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.planSignUp {
+    margin-top: 4.8rem;
+}

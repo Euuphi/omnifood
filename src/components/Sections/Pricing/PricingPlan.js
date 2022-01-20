@@ -21,22 +21,24 @@ import ListItem from "../../UI/ListItem";
 const PricingPlan = ({ name, price, text, details }) => {
     return (
         <div className={styles.pricingPlan}>
-            <p className={styles.planName}>{name}</p>
-            <p className={styles.planprice}>
-                <span>$</span>
-                {price}
-            </p>
-            <p className={styles.planText}>{text}</p>
+            <header className={styles.planHeader}>
+                <p className={styles.planName}>{name}</p>
+                <p className={styles.planPrice}>
+                    <span>$</span>
+                    {price}
+                </p>
+                <p className={styles.planText}>{text}</p>
+            </header>
             <List>
                 {details.map((detail) => {
-                    return (
-                        <ListItem>
-                            <span>{detail}</span>
-                        </ListItem>
-                    );
+                    return <ListItem text={detail} icon key={detail} />;
                 })}
             </List>
-            <Button href="#" text="Start eating well" />
+            <Button
+                className={styles.planSignUp}
+                href="#"
+                text="Start eating well"
+            />
         </div>
     );
 };
