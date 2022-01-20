@@ -1,3 +1,13 @@
+.pricingPlan {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricingDetails {
+    align-self: flex-start;
+}
+
 .planHeader {
     margin-bottom: 4.8rem;
     text-align: center;
