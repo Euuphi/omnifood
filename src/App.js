@@ -6,7 +6,7 @@ import Hero from "./components/Sections/Hero/Hero";
 import Featured from "./components/Sections/Featured/Featured";
 import How from "./components/Sections/How/How";
 import Meals from "./components/Sections/Meals/Meals";
-import Testimonials from "./components/Sections/Testimonials/Testimonials";
+import TestimonialsSection from "./components/Sections/Testimonials/TestimonialsSection";
 
 function App() {
     return (
@@ -16,7 +16,7 @@ function App() {
             <Featured />
             <How />
             <Meals />
-            <Testimonials />
+            <TestimonialsSection />
         </Fragment>
     );
 }
