@@ -7,6 +7,7 @@ import Featured from "./components/Sections/Featured/Featured";
 import How from "./components/Sections/How/How";
 import Meals from "./components/Sections/Meals/Meals";
 import TestimonialsSection from "./components/Sections/Testimonials/TestimonialsSection";
+import Pricing from "./components/Sections/Pricing/Pricing";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <How />
             <Meals />
             <TestimonialsSection />
+            <Pricing />
         </Fragment>
     );
 }
