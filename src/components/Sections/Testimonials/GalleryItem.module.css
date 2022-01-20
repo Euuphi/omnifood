@@ -1,4 +1,13 @@
+.galleryItem {
+    overflow: hidden;
+}
+
 .galleryItem img {
     display: block;
     width: 100%;
+    transition: all 400ms;
+}
+
+.galleryItem img:hover {
+    transform: scale(1.1);
 }
