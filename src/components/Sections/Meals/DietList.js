@@ -1,56 +1,32 @@
 import React from "react";
 
-// Icons
-import { IoCheckmarkOutline } from "react-icons/io5";
-
 // Stylesheets
 import styles from "./DietList.module.css";
 
 // Components
 import HeadingTetiary from "../../Headings/HeadingTertiary";
+import DietListItem from "./DietListItem";
 
 const DietList = () => {
-    const colorPrimary = "#e67e22";
+    const dietList = [
+        "Vegetarian",
+        "Vegan",
+        "Pescatarian",
+        "Gluten-free",
+        "Lactose-free",
+        "Keto",
+        "Paleo",
+        "Low FODMAP",
+        "Kid-friendly",
+    ];
+
     return (
         <div className={styles.diet}>
             <HeadingTetiary>Works with any diet</HeadingTetiary>
             <ul className={styles.list}>
-                <li className={styles.listItem}>
-                    <IoCheckmarkOutline color={colorPrimary} size="3rem" />
-                    <span>Vegetarian</span>
-                </li>
-                <li className={styles.listItem}>
-                    <IoCheckmarkOutline color={colorPrimary} size="3rem" />
-                    <span>Vegan</span>
-                </li>
-                <li className={styles.listItem}>
-                    <IoCheckmarkOutline color={colorPrimary} size="3rem" />
-                    <span>Pescatarian</span>
-                </li>
-                <li className={styles.listItem}>
-                    <IoCheckmarkOutline color={colorPrimary} size="3rem" />
-                    <span>Gluten-free</span>
-                </li>
-                <li className={styles.listItem}>
-                    <IoCheckmarkOutline color={colorPrimary} size="3rem" />
-                    <span>Lactose-free</span>
-                </li>
-                <li className={styles.listItem}>
-                    <IoCheckmarkOutline color={colorPrimary} size="3rem" />
-                    <span>Keto</span>
-                </li>
-                <li className={styles.listItem}>
-                    <IoCheckmarkOutline color={colorPrimary} size="3rem" />
-                    <span>Paleo</span>
-                </li>
-                <li className={styles.listItem}>
-                    <IoCheckmarkOutline color={colorPrimary} size="3rem" />
-                    <span>Low FODMAP</span>
-                </li>
-                <li className={styles.listItem}>
-                    <IoCheckmarkOutline color={colorPrimary} size="3rem" />
-                    <span>Kid-friendly</span>
-                </li>
+                {dietList.map((diet) => {
+                    return <DietListItem dietName={diet} key={diet} />;
+                })}
             </ul>
         </div>
     );
