@@ -6,6 +6,8 @@ import styles from "./Pricing.module.css";
 // Components
 import Container from "../../Layout/Container";
 import SectionHeading from "../../Headings/SectionHeading";
+import Grid from "../../Layout/Grid";
+import PricingPlan from "./PricingPlan";
 
 const Pricing = () => {
     return (
@@ -16,6 +18,12 @@ const Pricing = () => {
                     secondaryHeading="Eating well without breaking the bank"
                     noContainer
                 />
+            </Container>
+            <Container>
+                <Grid col={2}>
+                    <PricingPlan />
+                    <PricingPlan />
+                </Grid>
             </Container>
         </section>
     );
