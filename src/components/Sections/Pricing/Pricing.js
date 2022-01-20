@@ -12,7 +12,7 @@ import PricingPlan from "./PricingPlan";
 const Pricing = () => {
     const starterPlanDetails = [
         "1 meal per day",
-        "Order times are between 11am and 9pm",
+        "Order from 11am to 9pm",
         "Delivery is free",
     ];
 
@@ -39,6 +39,7 @@ const Pricing = () => {
                         text="per month, That's just $13 per meal!"
                         price={399}
                         details={starterPlanDetails}
+                        className={styles.planStarter}
                     />
                     <PricingPlan
                         name="Complete"
