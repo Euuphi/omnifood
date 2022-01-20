@@ -1,7 +1,11 @@
 import React from "react";
 
 // Icons
-import { FlameOutline, RestaurantOutline, StarOutline } from "react-ionicons";
+import {
+    IoFlameOutline,
+    IoRestaurantOutline,
+    IoStarOutline,
+} from "react-icons/io5";
 
 // Stylesheets
 import styles from "./MealCard.module.css";
@@ -53,22 +57,22 @@ const MealCard = ({
                 <p className={styles.mealTitle}>{title}</p>
                 <ul className={styles.mealAttributeList}>
                     <li className={styles.mealAttribute}>
-                        <FlameOutline color={colorPrimary} height="2.4rem" />
+                        <IoFlameOutline color={colorPrimary} size="2.4rem" />
                         <span>
                             <strong>{calories}</strong> calories
                         </span>
                     </li>
                     <li className={styles.mealAttribute}>
-                        <RestaurantOutline
+                        <IoRestaurantOutline
                             color={colorPrimary}
-                            height="2.4rem"
+                            size="2.4rem"
                         />
                         <span>
                             NutriScore &reg; <strong>{nutriscore}</strong>
                         </span>
                     </li>
                     <li className={styles.mealAttribute}>
-                        <StarOutline color={colorPrimary} height="2.4rem" />
+                        <IoStarOutline color={colorPrimary} size="2.4rem" />
                         <span>
                             <strong>{rating}</strong> {`rating (${reviews})`}
                         </span>
