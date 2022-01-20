@@ -1,11 +1,9 @@
 import React from "react";
 
-// Stylesheets
-import styles from "./DietList.module.css";
-
 // Components
 import HeadingTetiary from "../../Headings/HeadingTertiary";
 import DietListItem from "./DietListItem";
+import List from "../../UI/List";
 
 const DietList = () => {
     const dietList = [
@@ -21,13 +19,13 @@ const DietList = () => {
     ];
 
     return (
-        <div className={styles.diet}>
+        <div>
             <HeadingTetiary>Works with any diet</HeadingTetiary>
-            <ul className={styles.list}>
+            <List>
                 {dietList.map((diet) => {
                     return <DietListItem dietName={diet} key={diet} />;
                 })}
-            </ul>
+            </List>
         </div>
     );
 };
