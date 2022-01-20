@@ -29,7 +29,7 @@ const PricingPlan = ({ name, price, text, details }) => {
                 </p>
                 <p className={styles.planText}>{text}</p>
             </header>
-            <List>
+            <List className={styles.pricingDetails}>
                 {details.map((detail) => {
                     return <ListItem text={detail} icon key={detail} />;
                 })}
