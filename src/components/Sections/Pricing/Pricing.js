@@ -10,13 +10,13 @@ import Grid from "../../Layout/Grid";
 import PricingPlan from "./PricingPlan";
 
 const Pricing = () => {
-    const starterPlanDetails = [
+    const starterPlanBenefits = [
         "1 meal per day",
         "Order from 11am to 9pm",
         "Delivery is free",
     ];
 
-    const completePlanDetails = [
+    const completePlanBenefits = [
         "2 meals per day",
         "Order 24/7",
         "Delivery is free",
@@ -35,17 +35,17 @@ const Pricing = () => {
             <Container>
                 <Grid col={2}>
                     <PricingPlan
+                        className={styles.planStarter}
                         name="Starter"
                         text="per month, That's just $13 per meal!"
                         price={399}
-                        details={starterPlanDetails}
-                        className={styles.planStarter}
+                        planBenefits={starterPlanBenefits}
                     />
                     <PricingPlan
                         name="Complete"
                         text="per month, That's just $11 per meal!"
                         price={649}
-                        details={completePlanDetails}
+                        planBenefits={completePlanBenefits}
                     />
                 </Grid>
             </Container>

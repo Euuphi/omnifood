@@ -3,6 +3,9 @@ import React from "react";
 // Stylesheet
 import styles from "./PricingPlan.module.css";
 
+// Icons
+import { IoCheckmarkOutline, IoCloseOutline } from "react-icons/io5";
+
 // Components
 import Button from "../../UI/Button";
 import List from "../../UI/List";
@@ -14,13 +17,22 @@ import ListItem from "../../UI/ListItem";
  * @param {string} name - Plan name
  * @param {number} price - Plan price
  * @param {string} text - Additional text for plan
- * @param {string[]} details - Array of details to display in list
+ * @param {string[]} planBenefits - Array of benefits to display in list
+ * @param {string[]} planConstraints - Array of constraints to display in list
+ * @param {string} className - Add className for additional styling
  * @return {*}
  */
 
-const PricingPlan = ({ name, price, text, details }) => {
+const PricingPlan = ({
+    name,
+    price,
+    text,
+    planBenefits,
+    planConstraints,
+    className,
+}) => {
     return (
-        <div className={styles.pricingPlan}>
+        <div className={`${styles.pricingPlan} ${className}`}>
             <header className={styles.planHeader}>
                 <p className={styles.planName}>{name}</p>
                 <p className={styles.planPrice}>
@@ -30,9 +42,32 @@ const PricingPlan = ({ name, price, text, details }) => {
                 <p className={styles.planText}>{text}</p>
             </header>
             <List className={styles.pricingDetails}>
-                {details.map((detail) => {
-                    return <ListItem text={detail} icon key={detail} />;
+                {planBenefits.map((benefit) => {
+                    return (
+                        <ListItem
+                            text={benefit}
+                            icon={
+                                <IoCheckmarkOutline
+                                    color="#e67e22"
+                                    size="3rem"
+                                />
+                            }
+                            key={benefit}
+                        />
+                    );
                 })}
+                {planConstraints &&
+                    planConstraints.map((constraint) => {
+                        return (
+                            <ListItem
+                                text={constraint}
+                                icon={
+                                    <IoCloseOutline color="#666" size="3rem" />
+                                }
+                                key={constraint}
+                            />
+                        );
+                    })}
             </List>
             <Button
                 className={styles.planSignUp}
