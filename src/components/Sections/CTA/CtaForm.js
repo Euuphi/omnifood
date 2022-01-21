@@ -5,6 +5,7 @@ import styles from "./CtaForm.module.css";
 
 // Components
 import Grid from "../../Layout/Grid";
+import Button from "../../UI/Button";
 
 const CtaForm = () => {
     const [name, setName] = useState("");
@@ -59,7 +60,7 @@ const CtaForm = () => {
                     </select>
                 </div>
 
-                <button>Sign Up</button>
+                <Button text="Sign Up" className={styles.btnForm} />
             </Grid>
         </form>
     );
