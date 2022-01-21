@@ -1,4 +1,5 @@
 import React from "react";
+import { IoCheckmarkOutline } from "react-icons/io5";
 
 // Components
 import HeadingTetiary from "../../Headings/HeadingTertiary";
@@ -23,7 +24,18 @@ const DietList = () => {
             <HeadingTetiary>Works with any diet</HeadingTetiary>
             <List>
                 {dietList.map((diet) => {
-                    return <ListItem text={diet} icon key={diet} />;
+                    return (
+                        <ListItem
+                            text={diet}
+                            icon={
+                                <IoCheckmarkOutline
+                                    color="#e67e22"
+                                    size="3rem"
+                                />
+                            }
+                            key={diet}
+                        />
+                    );
                 })}
             </List>
         </div>
