@@ -7,13 +7,25 @@
     );
     border-radius: 15px;
     box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-
     overflow: hidden;
 
     height: 50rem;
 }
 
 .ctaTextBox {
+    color: #45260a;
+    padding: 6.4rem;
+    padding-top: 4.8rem;
+}
+
+.ctaHeading {
+    color: #45260a;
+    margin-bottom: 3.2rem;
+}
+
+.ctaText {
+    font-size: 1.8rem;
+    line-height: 1.8;
 }
 
 .ctaImageBox {
