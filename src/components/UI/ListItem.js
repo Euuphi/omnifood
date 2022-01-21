@@ -1,17 +1,20 @@
 import React from "react";
 
-// Icons
-import { IoCheckmarkOutline } from "react-icons/io5";
-
 // Stylesheet
 import styles from "./ListItem.module.css";
 
-const ListItem = ({ icon, text }) => {
-    const colorPrimary = "#e67e22";
+/**
+ * Styled <li> HTML element with basic
+ *
+ * @param {string} text - Text to display
+ * @param {jsx} icon - JSX of icon to display
+ * @return {*}
+ */
 
+const ListItem = ({ text, icon }) => {
     return (
         <li className={styles.listItem}>
-            {icon && <IoCheckmarkOutline color={colorPrimary} size="3rem" />}
+            {icon}
             <span>{text}</span>
         </li>
     );
