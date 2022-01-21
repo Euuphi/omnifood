@@ -1,0 +1,15 @@
+.cta {
+    background-color: var(--color-primary);
+    background-image: linear-gradient(
+        to right bottom,
+        #eb984e,
+        var(--color-primary)
+    );
+    border-radius: 11px;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+
+    height: 50rem;
+}
+
+.ctaImageBox {
+}

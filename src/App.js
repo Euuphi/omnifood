@@ -8,6 +8,7 @@ import How from "./components/Sections/How/How";
 import Meals from "./components/Sections/Meals/Meals";
 import TestimonialsSection from "./components/Sections/Testimonials/TestimonialsSection";
 import Pricing from "./components/Sections/Pricing/Pricing";
+import CTA from "./components/Sections/CTA/CTA";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             <Meals />
             <TestimonialsSection />
             <Pricing />
+            <CTA />
         </Fragment>
     );
 }
