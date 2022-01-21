@@ -2,12 +2,23 @@ import React from "react";
 
 // Stylesheets
 import styles from "./Pricing.module.css";
+import featureStyles from "./Feature.module.css";
+
+// Icons
+import { IconContext } from "react-icons";
+import {
+    IoInfiniteOutline,
+    IoLeafOutline,
+    IoNutritionOutline,
+    IoPauseOutline,
+} from "react-icons/io5";
 
 // Components
 import Container from "../../Layout/Container";
 import SectionHeading from "../../Headings/SectionHeading";
 import Grid from "../../Layout/Grid";
 import PricingPlan from "./PricingPlan";
+import Feature from "./Feature";
 
 const Pricing = () => {
     const starterPlanBenefits = [
@@ -34,7 +45,7 @@ const Pricing = () => {
                     noContainer
                 />
             </Container>
-            <Container>
+            <Container marginBottom="9.6rem">
                 <Grid col={2}>
                     <PricingPlan
                         className={styles.planStarter}
@@ -53,6 +64,32 @@ const Pricing = () => {
                     />
                 </Grid>
             </Container>
+            <IconContext.Provider value={{ className: featureStyles.icon }}>
+                <Container>
+                    <Grid col={4}>
+                        <Feature
+                            icon={<IoInfiniteOutline />}
+                            title="Never cook again!"
+                            text="Our subscriptions cover 365 days per year, even including major holidays."
+                        />
+                        <Feature
+                            icon={<IoNutritionOutline />}
+                            title="Local and organic"
+                            text="Our cooks only use local, fresh, and organic products to prepare your meals."
+                        />
+                        <Feature
+                            icon={<IoLeafOutline />}
+                            title="No waste"
+                            text="All our partners only use reusable containers to package all your meals."
+                        />
+                        <Feature
+                            icon={<IoPauseOutline />}
+                            title="Pause anytime"
+                            text="Going on vacation? Just pause your subscription, and we refund unused days."
+                        />
+                    </Grid>
+                </Container>
+            </IconContext.Provider>
         </section>
     );
 };
