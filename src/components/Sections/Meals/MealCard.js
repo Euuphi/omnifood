@@ -46,7 +46,11 @@ const MealCard = ({
         else if (tag === "Vegan") tagClass = styles.tagVegan;
         else if (tag === "Paleo") tagClass = styles.tagPaleo;
 
-        return <span className={`${styles.tag} ${tagClass}`}>{tag}</span>;
+        return (
+            <span className={`${styles.tag} ${tagClass}`} key={tag}>
+                {tag}
+            </span>
+        );
     };
 
     return (
