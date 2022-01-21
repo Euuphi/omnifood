@@ -1,7 +1,6 @@
 .pricingPlan {
     background-color: var(--color-tint);
     border-radius: 11px;
-    padding: 4.8rem;
     width: 75%;
 
     display: flex;
