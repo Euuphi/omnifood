@@ -45,7 +45,7 @@ const Pricing = () => {
                     noContainer
                 />
             </Container>
-            <Container marginBottom="9.6rem">
+            <Container marginBottom="4.8rem">
                 <Grid col={2}>
                     <PricingPlan
                         className={styles.planStarter}
@@ -64,6 +64,14 @@ const Pricing = () => {
                     />
                 </Grid>
             </Container>
+
+            <Container marginBottom="9.6rem">
+                <aside className={styles.planDetails}>
+                    Prices include all applicable taxes. Users can cancel at any
+                    time. Both plans include the follow:
+                </aside>
+            </Container>
+
             <IconContext.Provider value={{ className: featureStyles.icon }}>
                 <Container>
                     <Grid col={4}>
