@@ -33,6 +33,7 @@
 
         Shades:
             #cf711f
+            #45260a
 
         Accents:
 
@@ -60,6 +61,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 html {
