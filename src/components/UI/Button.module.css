@@ -1,18 +1,26 @@
+.btn,
 .btn:link,
 .btn:visited {
     border-radius: 9px;
-    color: #fff;
     display: inline-block;
     font-size: 2rem;
     font-weight: 600;
     padding: 1.6rem 3.2rem;
+    text-align: center;
     text-decoration: none;
     transition: all 300ms;
+
+    /* Only for .btn */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 
+.btnFull,
 .btnFull:link,
 .btnFull:visited {
     background-color: var(--color-primary);
+    color: #fff;
 }
 
 .btnFull:hover,
@@ -26,6 +34,7 @@
     color: #555;
 }
 
+.btnOutline,
 .btnOutline:hover,
 .btnOutline:active {
     background-color: #fdf2e9;

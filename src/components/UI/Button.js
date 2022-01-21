@@ -8,29 +8,33 @@ import styles from "./Button.module.css";
  *
  * @param {string} href - Value of href for anchor tag
  * @param {string} className - Add additional classes to style button
- * @param {*} text - Set text on button
- * @param {boolean} outline - Set true for outline style
- * @return {*}
+ * @param {string} text - Set text on button
+ * @param {string} preStyle - Set pre-made styles ("full", "outline", "form")
+ * @return {jsx} If href is excluded a <button> HTML element will be returned instead of <a> tag
  */
 
-const Button = ({ href, className, text, outline }) => {
+const Button = ({ href, className, text, preStyle }) => {
     let buttonStyle;
 
-    if (outline) {
-        buttonStyle = styles.btnOutline;
-    } else {
+    if (preStyle === "full") {
         buttonStyle = styles.btnFull;
+    } else if (preStyle === "outline") {
+        buttonStyle = styles.btnOutline;
+    } else if (preStyle === "form") {
+        buttonStyle = styles.btnForm;
+    } else {
+        buttonStyle = "";
     }
 
-    return (
+    return href ? (
         <a href={href} className={`${className} ${styles.btn} ${buttonStyle}`}>
             {text}
         </a>
+    ) : (
+        <button className={`${className} ${styles.btn} ${buttonStyle}`}>
+            {text}
+        </button>
     );
-};
-
-Button.defaultProps = {
-    href: "#",
 };
 
 export default Button;
