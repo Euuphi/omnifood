@@ -8,7 +8,7 @@
 
 .planStarter {
     background-color: transparent !important;
-    border: 3px solid var(--color-tint);
+    border: 3px solid var(--color-tint-light);
     justify-self: end;
     padding: 4.5rem;
 }
