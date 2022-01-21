@@ -20,7 +20,7 @@ const CtaForm = () => {
         <form className={styles.ctaForm} onSubmit={submitHandler}>
             <Grid col={2} gap="2.4rem 3.2rem">
                 <div>
-                    <label for="name">Name</label>
+                    <label for="name">Full Name</label>
                     <input
                         id="name"
                         type="text"
@@ -32,7 +32,7 @@ const CtaForm = () => {
                 </div>
 
                 <div>
-                    <label for="email">Email adress</label>
+                    <label for="email">Email</label>
                     <input
                         id="email"
                         type="email"
@@ -50,9 +50,7 @@ const CtaForm = () => {
                         required
                         value={select}
                         onChange={(event) => setSelect(event.target.value)}>
-                        <option value="">
-                            Please choose one of the follow options:
-                        </option>
+                        <option value="">Please choose one option:</option>
                         <option value="friends">Friends and Family</option>
                         <option value="youtube">YouTube</option>
                         <option value="podcast">Podcast</option>
