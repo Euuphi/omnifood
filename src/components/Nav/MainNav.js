@@ -1,15 +1,15 @@
 import React from "react";
 
-// Images
-import logo from "../../images/omnifood-logo.png";
-
 // Styles
 import styles from "./MainNav.module.css";
+
+// Components
+import Logo from "../UI/Logo";
 
 const MainNav = () => {
     return (
         <header className={styles.header}>
-            <img src={logo} className={styles.logo} alt="Omnifood logo" />
+            <Logo />
             <nav className={styles.mainNav}>
                 <ul className={styles.mainNavList}>
                     <li className={styles.mainNavListItem}>
