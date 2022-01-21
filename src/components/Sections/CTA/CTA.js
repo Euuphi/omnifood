@@ -7,6 +7,7 @@ import styles from "./CTA.module.css";
 import Container from "../../Layout/Container";
 import Grid from "../../Layout/Grid";
 import HeadingSecondary from "../../Headings/HeadingSecondary";
+import CtaForm from "./CtaForm";
 
 const CTA = () => {
     return (
@@ -23,6 +24,7 @@ const CTA = () => {
                                 for you. Start eating well today. You can cancel
                                 or pause anytime. And the first meal is on us!
                             </p>
+                            <CtaForm />
                         </div>
                         <div
                             className={styles.ctaImageBox}
