@@ -90,6 +90,11 @@ strong {
     font-weight: 500;
 }
 
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
 .margin-right-sm {
     margin-right: 1.6rem !important;
 }
