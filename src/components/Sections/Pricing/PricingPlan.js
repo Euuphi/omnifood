@@ -73,6 +73,7 @@ const PricingPlan = ({
                 className={styles.planSignUp}
                 href="#"
                 text="Start eating well"
+                preStyle="full"
             />
         </div>
     );

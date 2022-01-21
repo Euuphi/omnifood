@@ -39,12 +39,13 @@ const Hero = () => {
                                 href="#"
                                 className="margin-right-sm"
                                 text="Start eating well"
+                                preStyle="full"
                             />
                             <Button
                                 href="#"
                                 className="margin-right-sm"
-                                outline
                                 text="Learn more &darr;"
+                                preStyle="outline"
                             />
                             <div className={styles.deliveredMeals}>
                                 <div className={styles.deliveredImages}>
