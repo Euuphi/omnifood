@@ -16,6 +16,8 @@ const Pricing = () => {
         "Delivery is free",
     ];
 
+    const starterPlanConstraints = ["Get access to latest recipes"];
+
     const completePlanBenefits = [
         "2 meals per day",
         "Order 24/7",
@@ -40,8 +42,10 @@ const Pricing = () => {
                         text="per month, That's just $13 per meal!"
                         price={399}
                         planBenefits={starterPlanBenefits}
+                        planConstraints={starterPlanConstraints}
                     />
                     <PricingPlan
+                        className={styles.planComplete}
                         name="Complete"
                         text="per month, That's just $11 per meal!"
                         price={649}
