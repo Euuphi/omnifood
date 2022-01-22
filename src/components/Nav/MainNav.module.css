@@ -43,3 +43,10 @@
 .navCta.mainNavLink:active {
     background-color: #cf711f;
 }
+
+/* Media Query for less than 1200px */
+@media (max-width: 75em) {
+    .header {
+        padding: 0 3.2rem;
+    }
+}

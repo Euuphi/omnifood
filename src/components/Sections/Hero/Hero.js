@@ -36,7 +36,6 @@ const Hero = () => {
                             will make you eat healthy again. Tailored to your
                             personal tastes and nutritional needs.
                         </p>
-                        {/* TODO: Extract into reusable component */}
                         <Button
                             href="#"
                             className="margin-right-sm"
