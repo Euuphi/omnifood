@@ -44,3 +44,25 @@
 .deliveredText span {
     color: #cf711f;
 }
+
+/* Small Tablet - 944px */
+@media (max-width: 59em) {
+    .heroTextBox {
+        margin: 0 auto;
+        text-align: center;
+        width: 80%;
+    }
+
+    .deliveredMeals {
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+
+    .heroImageBox {
+        text-align: center;
+    }
+
+    .heroImage {
+        width: 60%;
+    }
+}

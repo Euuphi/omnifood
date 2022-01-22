@@ -20,12 +20,16 @@ import HeadingPrimary from "../../Headings/HeadingPrimary";
 import Button from "../../UI/Button";
 
 const Hero = () => {
-    const matches = useMediaQuery("(max-width: 84em)");
+    // Media Queries
+    const laptopScreen = useMediaQuery("(max-width: 84em)");
+    const tabletSmall = useMediaQuery("(max-width: 59em");
 
     return (
         <section className={styles.sectionHero}>
-            <Container maxWidth={matches ? "120rem" : "130rem"}>
-                <Grid col={2} alignItems="center">
+            <Container
+                maxWidth={laptopScreen ? "120rem" : "130rem"}
+                padding={tabletSmall ? "0 8rem" : "0 3.2rem"}>
+                <Grid col={tabletSmall ? 1 : 2} alignItems="center">
                     <div className={styles.heroTextBox}>
                         <HeadingPrimary>
                             A healthy meal delivered to your door, every single
