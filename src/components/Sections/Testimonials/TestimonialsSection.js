@@ -10,7 +10,9 @@ import Gallery from "./Gallery";
 
 const TestimonialsSection = () => {
     return (
-        <section className={styles.sectionTestimonials}>
+        <section
+            id="testimonialsSection"
+            className={styles.sectionTestimonials}>
             <Grid col="55fr 45fr" gap="0" alignItems="center">
                 <Testimonials />
                 <Gallery />

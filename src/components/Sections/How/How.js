@@ -18,7 +18,7 @@ import Step from "./Step";
 
 const How = () => {
     return (
-        <section className={styles.sectionHow}>
+        <section id="howSection" className={styles.sectionHow}>
             <SectionHeading
                 subheading="How it works"
                 secondaryHeading="Your daily dose of health in 3 simple steps"

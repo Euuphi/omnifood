@@ -17,7 +17,7 @@ import Link from "../../UI/Link";
 
 const Meals = () => {
     return (
-        <section className={styles.sectionMeals}>
+        <section id="mealsSection" className={styles.sectionMeals}>
             <SectionHeading
                 className={styles.mealsHeading}
                 subheading="Meals"

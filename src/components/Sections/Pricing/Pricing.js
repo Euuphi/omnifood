@@ -37,7 +37,7 @@ const Pricing = () => {
     ];
 
     return (
-        <section className={styles.sectionPricing}>
+        <section id="pricingSection" className={styles.sectionPricing}>
             <Container marginTop="9.6rem">
                 <SectionHeading
                     subheading="Pricing"
