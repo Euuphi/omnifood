@@ -22,12 +22,26 @@ const Grid = ({
     justifyContent,
     padding,
 }) => {
-    const tabletScreen = useMediaQuery("(max-width: 75em)");
+    // Function to calculate and return gap value based on screen size
+    const largeTabletScreen = useMediaQuery("(max-width: 75em)");
+    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
+    const calculateGap = () => {
+        if (smallTabletScreen) {
+            // Gap for small tablet screen
+            return "4.8rem";
+        } else if (largeTabletScreen) {
+            // Gap for large tablet screen
+            return "6.4rem";
+        } else {
+            // Default gap
+            return "9.6rem";
+        }
+    };
 
     // Define default gap values
-    let gapDefault = gap || "9.6rem";
-    let tabletGapDefault = gap || "6.4rem";
+    let gapValue = gap || calculateGap();
 
+    // Allow inputs for non equal grid-template-column
     const colTemplate = isNaN(col) ? col : `repeat(${col}, 1fr)`;
     const rowTemplate = isNaN(row) ? row : `repeat(${row}, 1fr)`;
 
@@ -35,7 +49,7 @@ const Grid = ({
     const gridStyles = {
         display: "grid",
         alignItems,
-        gap: tabletScreen ? tabletGapDefault : gapDefault,
+        gap: gapValue,
         gridTemplateColumns: colTemplate,
         gridTemplateRows: rowTemplate,
         justifyContent,
