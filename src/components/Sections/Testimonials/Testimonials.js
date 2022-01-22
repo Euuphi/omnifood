@@ -1,7 +1,7 @@
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 
 // Images
-
 import dave from "../../../images/customers/dave.jpg";
 import ben from "../../../images/customers/ben.jpg";
 import steve from "../../../images/customers/steve.jpg";
@@ -14,8 +14,10 @@ import SectionHeading from "../../Headings/SectionHeading";
 import TestimonialItem from "./TestimonialItem";
 
 const Testimonials = () => {
+    const tabletScreen = useMediaQuery("(max-width: 75em)");
+
     return (
-        <Container padding="9.6rem">
+        <Container padding={tabletScreen ? "4.8rem" : "9.6rem"}>
             <SectionHeading
                 subheading="Testimonials"
                 secondaryHeading="Once you try it, you can't go back"
