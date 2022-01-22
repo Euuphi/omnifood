@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 
 /**
  * Create a basic grid container
@@ -21,6 +22,12 @@ const Grid = ({
     justifyContent,
     padding,
 }) => {
+    const tabletScreen = useMediaQuery("(max-width: 75em)");
+
+    // Define default gap values
+    let gapDefault = gap || "9.6rem";
+    let tabletGapDefault = gap || "6.4rem";
+
     const colTemplate = isNaN(col) ? col : `repeat(${col}, 1fr)`;
     const rowTemplate = isNaN(row) ? row : `repeat(${row}, 1fr)`;
 
@@ -28,7 +35,7 @@ const Grid = ({
     const gridStyles = {
         display: "grid",
         alignItems,
-        gap,
+        gap: tabletScreen ? tabletGapDefault : gapDefault,
         gridTemplateColumns: colTemplate,
         gridTemplateRows: rowTemplate,
         justifyContent,
@@ -41,7 +48,6 @@ const Grid = ({
 Grid.defaultProps = {
     alignItems: "stretch",
     justifyContent: "start",
-    gap: "9.6rem",
     row: 1,
 };
 
