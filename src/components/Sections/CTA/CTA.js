@@ -12,7 +12,7 @@ import CtaForm from "./CtaForm";
 const CTA = () => {
     return (
         <section className={styles.sectionCta}>
-            <Container marginBottom="9.6rem">
+            <Container marginBottom="12.8rem">
                 <div className={styles.cta}>
                     <Grid col="2fr 1fr" gap="0">
                         <div className={styles.ctaTextBox}>
