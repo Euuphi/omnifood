@@ -22,3 +22,10 @@
     height: 3.2rem;
     opacity: 50%;
 }
+
+/* Small Tablets - Below 944px */
+@media (max-width: 59em) {
+    .logos img {
+        height: 2.4rem;
+    }
+}
