@@ -57,6 +57,11 @@
 --- 07 WHITESPACE
     Spacing (px):
         2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+--- Media Queries
+        84em: 1344px (Laptop)
+        75em: 1200px (Large Tablet)
+        59em: 944px (Small Tablet)
 */
 
 * {
@@ -101,8 +106,16 @@ a {
     margin-right: 1.6rem !important;
 }
 
+/* Below 1200px (Landscape Tablet) */
 @media (max-width: 75em) {
     html {
         font-size: 56.25%;
+    }
+}
+
+/* Below 944px (Tablet) */
+@media (max-width: 59em) {
+    html {
+        font-size: 50%;
     }
 }
