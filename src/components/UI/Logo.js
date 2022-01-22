@@ -6,9 +6,16 @@ import logo from "../../images/omnifood-logo.png";
 // Stylesheets
 import styles from "./Logo.module.css";
 
-const Logo = () => {
+/**
+ * Omnifood Logo
+ *
+ * @param {string} className - Add additional className for styling
+ * @return {*}
+ */
+
+const Logo = ({ className }) => {
     return (
-        <a href="#">
+        <a className={className} href="#">
             <img src={logo} className={styles.logo} alt="Omnifood logo" />
         </a>
     );
