@@ -100,3 +100,9 @@ a {
 .margin-right-sm {
     margin-right: 1.6rem !important;
 }
+
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
