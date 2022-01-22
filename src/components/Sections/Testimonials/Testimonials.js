@@ -14,10 +14,26 @@ import SectionHeading from "../../Headings/SectionHeading";
 import TestimonialItem from "./TestimonialItem";
 
 const Testimonials = () => {
+    // Media Queries
     const largeTabletScreen = useMediaQuery("(max-width: 75em)");
+    const smallTabletScreen = useMediaQuery("(max-width: 59em");
+
+    // Function to calculate padding for testimonials
+    const calculatePadding = () => {
+        if (smallTabletScreen) {
+            // Padding for small tablet
+            return "9.6rem";
+        } else if (largeTabletScreen) {
+            // Padding for large tablet
+            return "4.8rem";
+        } else {
+            // Default padding
+            return "9.6rem";
+        }
+    };
 
     return (
-        <Container padding={largeTabletScreen ? "4.8rem" : "9.6rem"}>
+        <Container padding={calculatePadding()}>
             <SectionHeading
                 subheading="Testimonials"
                 secondaryHeading="Once you try it, you can't go back"
