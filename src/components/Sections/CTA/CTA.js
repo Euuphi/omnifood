@@ -11,11 +11,11 @@ import HeadingSecondary from "../../Headings/HeadingSecondary";
 import CtaForm from "./CtaForm";
 
 const CTA = () => {
-    const tabletScreen = useMediaQuery("(max-width: 75em)");
+    const largeTabletScreen = useMediaQuery("(max-width: 75em)");
 
     return (
         <section id="ctaSection" className={styles.sectionCta}>
-            <Container marginBottom={tabletScreen ? "9.6rem" : "12.8rem"}>
+            <Container marginBottom={largeTabletScreen ? "9.6rem" : "12.8rem"}>
                 <div className={styles.cta}>
                     <Grid col="2fr 1fr" gap="0">
                         <div className={styles.ctaTextBox}>

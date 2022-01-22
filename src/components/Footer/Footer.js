@@ -17,13 +17,13 @@ import Grid from "../Layout/Grid";
 import Logo from "../UI/Logo";
 
 const Footer = () => {
-    const tabletScreen = useMediaQuery("(max-width: 75em)");
+    const largeTabletScreen = useMediaQuery("(max-width: 75em)");
     const copyrightDate = new Date().getFullYear();
 
     return (
         <footer className={styles.footer}>
             <Container
-                padding={`${tabletScreen ? "9.6rem" : "12.8rem"} 3.2rem`}>
+                padding={`${largeTabletScreen ? "9.6rem" : "12.8rem"} 3.2rem`}>
                 <Grid col="1.5fr 1.5fr 1fr 1fr 1fr">
                     <div className={styles.logoCol}>
                         <Logo className={styles.footerLogo} />

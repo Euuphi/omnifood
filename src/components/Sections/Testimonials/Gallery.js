@@ -22,10 +22,10 @@ import GalleryItem from "./GalleryItem";
 const Gallery = () => {
     //TODO: Look into creating carasoul for gallery
 
-    const matches = useMediaQuery("(max-width: 84em)");
+    const largeTabletScreen = useMediaQuery("(max-width: 84em)");
 
     return (
-        <Grid col={matches ? 2 : 3} gap="1.6rem" padding="1.6rem">
+        <Grid col={largeTabletScreen ? 2 : 3} gap="1.6rem" padding="1.6rem">
             <GalleryItem
                 imageSrc={galleryOne}
                 imageAlt="Beautifully arranged food"
@@ -42,7 +42,7 @@ const Gallery = () => {
                 imageSrc={galleryFour}
                 imageAlt="Beautifully arranged food"
             />
-            {matches || (
+            {largeTabletScreen || (
                 <GalleryItem
                     imageSrc={galleryFive}
                     imageAlt="Beautifully arranged food"
@@ -56,7 +56,7 @@ const Gallery = () => {
                 imageSrc={gallerySeven}
                 imageAlt="Beautifully arranged food"
             />
-            {matches || (
+            {largeTabletScreen || (
                 <>
                     <GalleryItem
                         imageSrc={galleryEight}

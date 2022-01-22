@@ -14,10 +14,10 @@ import SectionHeading from "../../Headings/SectionHeading";
 import TestimonialItem from "./TestimonialItem";
 
 const Testimonials = () => {
-    const tabletScreen = useMediaQuery("(max-width: 75em)");
+    const largeTabletScreen = useMediaQuery("(max-width: 75em)");
 
     return (
-        <Container padding={tabletScreen ? "4.8rem" : "9.6rem"}>
+        <Container padding={largeTabletScreen ? "4.8rem" : "9.6rem"}>
             <SectionHeading
                 subheading="Testimonials"
                 secondaryHeading="Once you try it, you can't go back"
