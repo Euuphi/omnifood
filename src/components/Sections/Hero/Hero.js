@@ -1,4 +1,5 @@
 import React from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 // Images
 import hero from "../../../images/hero.png";
@@ -19,9 +20,11 @@ import HeadingPrimary from "../../Headings/HeadingPrimary";
 import Button from "../../UI/Button";
 
 const Hero = () => {
+    const matches = useMediaQuery("(max-width: 84em)");
+
     return (
         <section className={styles.sectionHero}>
-            <Container maxWidth="130rem">
+            <Container maxWidth={matches ? "120rem" : "130rem"}>
                 <Grid col={2} alignItems="center">
                     <div className={styles.heroTextBox}>
                         <HeadingPrimary>

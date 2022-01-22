@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 
 // Images
 import galleryOne from "../../../images/gallery/gallery-1.jpg";
@@ -19,8 +20,12 @@ import Grid from "../../Layout/Grid";
 import GalleryItem from "./GalleryItem";
 
 const Gallery = () => {
+    //TODO: Look into creating carasoul for gallery
+
+    const matches = useMediaQuery("(max-width: 84em)");
+
     return (
-        <Grid col={3} gap="1.6rem" padding="1.6rem">
+        <Grid col={matches ? 2 : 3} gap="1.6rem" padding="1.6rem">
             <GalleryItem
                 imageSrc={galleryOne}
                 imageAlt="Beautifully arranged food"
@@ -37,10 +42,12 @@ const Gallery = () => {
                 imageSrc={galleryFour}
                 imageAlt="Beautifully arranged food"
             />
-            <GalleryItem
-                imageSrc={galleryFive}
-                imageAlt="Beautifully arranged food"
-            />
+            {matches || (
+                <GalleryItem
+                    imageSrc={galleryFive}
+                    imageAlt="Beautifully arranged food"
+                />
+            )}
             <GalleryItem
                 imageSrc={gallerySix}
                 imageAlt="Beautifully arranged food"
@@ -49,18 +56,22 @@ const Gallery = () => {
                 imageSrc={gallerySeven}
                 imageAlt="Beautifully arranged food"
             />
-            <GalleryItem
-                imageSrc={galleryEight}
-                imageAlt="Beautifully arranged food"
-            />
-            <GalleryItem
-                imageSrc={galleryNine}
-                imageAlt="Beautifully arranged food"
-            />
-            <GalleryItem
-                imageSrc={galleryTen}
-                imageAlt="Beautifully arranged food"
-            />
+            {matches || (
+                <>
+                    <GalleryItem
+                        imageSrc={galleryEight}
+                        imageAlt="Beautifully arranged food"
+                    />
+                    <GalleryItem
+                        imageSrc={galleryNine}
+                        imageAlt="Beautifully arranged food"
+                    />
+                    <GalleryItem
+                        imageSrc={galleryTen}
+                        imageAlt="Beautifully arranged food"
+                    />
+                </>
+            )}
             <GalleryItem
                 imageSrc={galleryEleven}
                 imageAlt="Beautifully arranged food"

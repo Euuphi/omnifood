@@ -33,3 +33,9 @@
     margin-bottom: 1.6rem;
     text-transform: uppercase;
 }
+
+@media (max-width: 84em) {
+    .headingPrimary {
+        font-size: 4.4rem;
+    }
+}
