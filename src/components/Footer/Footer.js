@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 
 // Stylesheets
 import styles from "./Footer.module.css";
@@ -16,11 +17,13 @@ import Grid from "../Layout/Grid";
 import Logo from "../UI/Logo";
 
 const Footer = () => {
+    const tabletScreen = useMediaQuery("(max-width: 75em)");
     const copyrightDate = new Date().getFullYear();
 
     return (
         <footer className={styles.footer}>
-            <Container padding="12.8rem 0">
+            <Container
+                padding={`${tabletScreen ? "9.6rem" : "12.8rem"} 3.2rem`}>
                 <Grid col="1.5fr 1.5fr 1fr 1fr 1fr">
                     <div className={styles.logoCol}>
                         <Logo className={styles.footerLogo} />
