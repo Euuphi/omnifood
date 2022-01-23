@@ -34,11 +34,15 @@
     text-transform: uppercase;
 }
 
+/* Laptop - Below 1344px */
+
 @media (max-width: 84em) {
     .headingPrimary {
         font-size: 4.4rem;
     }
 }
+
+/* Large Tablet - Below 1200px */
 
 @media (max-width: 75em) {
     .headingSecondary {
@@ -47,5 +51,13 @@
 
     .headingTertiary {
         font-size: 2.4rem;
+    }
+}
+
+/* Mini Tablet - Below 752px */
+
+@media (max-width: 47em) {
+    .headingSecondary {
+        font-size: 4.8rem;
     }
 }
