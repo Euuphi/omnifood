@@ -1,6 +1,9 @@
 import React from "react";
 import { IoCheckmarkOutline } from "react-icons/io5";
 
+// Stylesheets
+import styles from "./DietList.module.css";
+
 // Components
 import HeadingTetiary from "../../Headings/HeadingTertiary";
 import List from "../../UI/List";
@@ -20,7 +23,7 @@ const DietList = () => {
     ];
 
     return (
-        <div>
+        <div className={styles.dietList}>
             <HeadingTetiary>Works with any diet</HeadingTetiary>
             <List>
                 {dietList.map((diet) => {
