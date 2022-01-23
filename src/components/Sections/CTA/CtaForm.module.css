@@ -38,3 +38,10 @@
     outline: none;
     box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
+
+/* Small Tablets - Below 944px */
+@media (max-width: 59em) {
+    .btnForm {
+        margin-top: 1.2rem;
+    }
+}

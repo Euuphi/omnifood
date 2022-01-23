@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "@mui/material";
 
 // Stylesheets
 import styles from "./CtaForm.module.css";
@@ -12,6 +13,8 @@ const CtaForm = () => {
     const [email, setEmail] = useState("");
     const [select, setSelect] = useState("");
 
+    const smallTabletScreen = useMediaQuery("(max-width: 59em");
+
     const submitHandler = (event) => {
         event.preventDefault();
         console.log(select);
@@ -19,7 +22,7 @@ const CtaForm = () => {
 
     return (
         <form className={styles.ctaForm} onSubmit={submitHandler}>
-            <Grid col={2} gap="2.4rem 3.2rem">
+            <Grid col={smallTabletScreen ? 1 : 2} gap="2.4rem 3.2rem">
                 <div>
                     <label for="name">Full Name</label>
                     <input
