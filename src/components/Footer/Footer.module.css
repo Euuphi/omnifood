@@ -21,7 +21,6 @@
 .copyright {
     color: #767676;
     font-size: 1.4rem;
-    align-self: flex-end;
     line-height: 1.6;
     margin-top: auto;
 }
@@ -60,4 +59,18 @@
 .footerLink:hover,
 .footerLink:active {
     color: #555;
+}
+
+/* Mini Tablet - Below 752px */
+
+@media (max-width: 47em) {
+    .nav {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+
+    .address,
+    .logoCol {
+        grid-column: span 3;
+    }
 }
