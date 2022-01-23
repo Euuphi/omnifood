@@ -20,12 +20,24 @@ import Grid from "../../Layout/Grid";
 import GalleryItem from "./GalleryItem";
 
 const Gallery = () => {
-    //TODO: Look into creating carasoul for gallery
+    //TODO: Look into creating carasoul for gallery on large tablet size
 
+    // Media Queries
     const largeTabletScreen = useMediaQuery("(max-width: 84em)");
+    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
+
+    const calculateCols = () => {
+        if (smallTabletScreen) {
+            return 6;
+        } else if (largeTabletScreen) {
+            return 2;
+        } else {
+            return 3;
+        }
+    };
 
     return (
-        <Grid col={largeTabletScreen ? 2 : 3} gap="1.6rem" padding="1.6rem">
+        <Grid col={calculateCols()} gap="1.6rem" padding="1.6rem">
             <GalleryItem
                 imageSrc={galleryOne}
                 imageAlt="Beautifully arranged food"
@@ -42,7 +54,7 @@ const Gallery = () => {
                 imageSrc={galleryFour}
                 imageAlt="Beautifully arranged food"
             />
-            {largeTabletScreen || (
+            {(largeTabletScreen && !smallTabletScreen) || (
                 <GalleryItem
                     imageSrc={galleryFive}
                     imageAlt="Beautifully arranged food"
@@ -56,7 +68,7 @@ const Gallery = () => {
                 imageSrc={gallerySeven}
                 imageAlt="Beautifully arranged food"
             />
-            {largeTabletScreen || (
+            {(largeTabletScreen && !smallTabletScreen) || (
                 <>
                     <GalleryItem
                         imageSrc={galleryEight}
