@@ -7,7 +7,7 @@ import React from "react";
  * @param {string} maxWidth - Max width of the container - Default: "120rem"
  * @param {string} marginTop - Value of margin-top property - Default: "0"
  * @param {string} marginBottom - Value of margin-bottom property - Defualt: "0"
- * @param {string} Padding - Value of padding property - Defualt: "0 3.2rem"
+ * @param {string} padding - Value of padding property - Defualt: "0 3.2rem"
  * @return {*}
  */
 
