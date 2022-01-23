@@ -51,3 +51,10 @@
 .planSignUp {
     margin-top: 4.8rem;
 }
+
+/* Mini Tablet - Below 752px */
+@media (max-width: 47em) {
+    .pricingPlan {
+        width: 100%;
+    }
+}
