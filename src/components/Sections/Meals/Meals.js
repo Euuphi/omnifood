@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 
 // Images
 import jpGyozas from "../../../images/meals/meal-1.jpg";
@@ -16,6 +17,9 @@ import DietList from "./DietList";
 import Link from "../../UI/Link";
 
 const Meals = () => {
+    // Media Queries
+    const miniTabletScreen = useMediaQuery("(max-width: 47em)");
+
     return (
         <section id="mealsSection" className={styles.sectionMeals}>
             <SectionHeading
@@ -24,7 +28,7 @@ const Meals = () => {
                 secondaryHeading="Omnifood AI chooses from 5,000+ recipes"
             />
             <Container marginBottom="4.8rem">
-                <Grid col={3}>
+                <Grid col={miniTabletScreen ? 2 : 3}>
                     <MealCard
                         imageSrc={jpGyozas}
                         imageAlt="Japanese Gyozas"
