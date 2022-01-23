@@ -1,9 +1,9 @@
 import React from "react";
 
 // Stylesheets
-import styles from "./DesktopNav.module.css";
+import styles from "./NavMenu.module.css";
 
-const DesktopNav = () => {
+const NavMenu = () => {
     return (
         <nav className={styles.mainNav}>
             <ul className={styles.mainNavList}>
@@ -41,4 +41,4 @@ const DesktopNav = () => {
     );
 };
 
-export default DesktopNav;
+export default NavMenu;
