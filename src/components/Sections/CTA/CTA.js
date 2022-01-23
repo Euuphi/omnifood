@@ -11,13 +11,33 @@ import HeadingSecondary from "../../Headings/HeadingSecondary";
 import CtaForm from "./CtaForm";
 
 const CTA = () => {
+    // Media Queries
     const largeTabletScreen = useMediaQuery("(max-width: 75em)");
+    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
+
+    // Function to calculate margin-bottom of Container based on media queries
+    const calculateMarginBottom = () => {
+        if (largeTabletScreen) {
+            return "9.6rem";
+        } else {
+            return "12.8rem";
+        }
+    };
+
+    // Function to calculate grid-template-column based on media queries
+    const calculateCols = () => {
+        if (smallTabletScreen) {
+            return "3fr 2fr";
+        } else {
+            return "2fr 1fr";
+        }
+    };
 
     return (
         <section id="ctaSection" className={styles.sectionCta}>
-            <Container marginBottom={largeTabletScreen ? "9.6rem" : "12.8rem"}>
+            <Container marginBottom={calculateMarginBottom()}>
                 <div className={styles.cta}>
-                    <Grid col="2fr 1fr" gap="0">
+                    <Grid col={calculateCols()} gap="0">
                         <div className={styles.ctaTextBox}>
                             <HeadingSecondary className={styles.ctaHeading}>
                                 Get your first meal for free!
