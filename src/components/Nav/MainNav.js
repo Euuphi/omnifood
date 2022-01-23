@@ -6,8 +6,8 @@ import styles from "./MainNav.module.css";
 
 // Components
 import Logo from "../UI/Logo";
-import MobileNavButton from "./MobileNavButton";
 import NavMenu from "./NavMenu";
+import MobileNavButton from "./MobileNavButton";
 
 const MainNav = () => {
     // Media Queries
@@ -33,9 +33,16 @@ const MainNav = () => {
     return (
         <header className={styles.header}>
             <Logo />
-            {mobileNav || <NavMenu />}
-            {mobileNav && (
-                <MobileNavButton menuOpen={menuOpen} onClick={clickHandler} />
+            {mobileNav ? (
+                <>
+                    <MobileNavButton
+                        menuOpen={menuOpen}
+                        onClick={clickHandler}
+                    />
+                    {menuOpen && <NavMenu />}
+                </>
+            ) : (
+                <NavMenu />
             )}
         </header>
     );
