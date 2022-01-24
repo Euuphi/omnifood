@@ -16,7 +16,8 @@ import TestimonialItem from "./TestimonialItem";
 const Testimonials = () => {
     // Media Queries
     const largeTabletScreen = useMediaQuery("(max-width: 75em)");
-    const smallTabletScreen = useMediaQuery("(max-width: 59em");
+    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
+    const mobileScreen = useMediaQuery("(max-width: 34em)");
 
     // Function to calculate padding for testimonials
     const calculatePadding = () => {
@@ -39,7 +40,7 @@ const Testimonials = () => {
                 secondaryHeading="Once you try it, you can't go back"
                 noContainer
             />
-            <Grid col={2} gap="4.8rem 8rem">
+            <Grid col={mobileScreen ? 1 : 2} gap="4.8rem 8rem">
                 <TestimonialItem
                     author="Dave Bryson"
                     quote="Inexpensive, healthy and great-tasting meals, without evenhaving to order manually! It feels truly magical."

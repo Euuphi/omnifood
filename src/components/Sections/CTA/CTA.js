@@ -14,6 +14,7 @@ const CTA = () => {
     // Media Queries
     const largeTabletScreen = useMediaQuery("(max-width: 75em)");
     const smallTabletScreen = useMediaQuery("(max-width: 59em)");
+    const mobileScreen = useMediaQuery("(max-width: 34em)");
 
     // Function to calculate margin-bottom of Container based on media queries
     const calculateMarginBottom = () => {
@@ -26,7 +27,9 @@ const CTA = () => {
 
     // Function to calculate grid-template-column based on media queries
     const calculateCols = () => {
-        if (smallTabletScreen) {
+        if (mobileScreen) {
+            return 1;
+        } else if (smallTabletScreen) {
             return "3fr 2fr";
         } else {
             return "2fr 1fr";

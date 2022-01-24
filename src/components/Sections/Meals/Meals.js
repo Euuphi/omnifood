@@ -19,6 +19,17 @@ import Link from "../../UI/Link";
 const Meals = () => {
     // Media Queries
     const miniTabletScreen = useMediaQuery("(max-width: 47em)");
+    const mobileScreen = useMediaQuery("(max-width: 34em)");
+
+    const calculateCols = () => {
+        if (mobileScreen) {
+            return 1;
+        } else if (miniTabletScreen) {
+            return 2;
+        } else {
+            return 3;
+        }
+    };
 
     return (
         <section id="mealsSection" className={styles.sectionMeals}>
@@ -28,7 +39,7 @@ const Meals = () => {
                 secondaryHeading="Omnifood AI chooses from 5,000+ recipes"
             />
             <Container marginBottom="4.8rem">
-                <Grid col={miniTabletScreen ? 2 : 3}>
+                <Grid col={calculateCols()}>
                     <MealCard
                         imageSrc={jpGyozas}
                         imageAlt="Japanese Gyozas"

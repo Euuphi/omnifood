@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 
 // Stylesheets
 import styles from "./Pricing.module.css";
@@ -36,6 +37,8 @@ const Pricing = () => {
         "Get access to latest recipes",
     ];
 
+    const mobileScreen = useMediaQuery("(max-width: 34em)");
+
     return (
         <section id="pricingSection" className={styles.sectionPricing}>
             <Container marginTop="9.6rem">
@@ -46,7 +49,7 @@ const Pricing = () => {
                 />
             </Container>
             <Container marginBottom="4.8rem">
-                <Grid col={2}>
+                <Grid col={mobileScreen ? 1 : 2}>
                     <PricingPlan
                         className={styles.planStarter}
                         name="Starter"
@@ -74,7 +77,7 @@ const Pricing = () => {
 
             <IconContext.Provider value={{ className: featureStyles.icon }}>
                 <Container>
-                    <Grid col={4}>
+                    <Grid col={mobileScreen ? 1 : 4}>
                         <Feature
                             icon={<IoInfiniteOutline />}
                             title="Never cook again!"

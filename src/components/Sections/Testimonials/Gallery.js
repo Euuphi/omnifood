@@ -25,9 +25,12 @@ const Gallery = () => {
     // Media Queries
     const largeTabletScreen = useMediaQuery("(max-width: 84em)");
     const smallTabletScreen = useMediaQuery("(max-width: 59em)");
+    const mobileScreen = useMediaQuery("(max-width: 34em)");
 
     const calculateCols = () => {
-        if (smallTabletScreen) {
+        if (mobileScreen) {
+            return 4;
+        } else if (smallTabletScreen) {
             return 6;
         } else if (largeTabletScreen) {
             return 2;
