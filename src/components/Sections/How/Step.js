@@ -40,7 +40,9 @@ const Step = ({
 
     return (
         <Container>
-            <Grid col={mobileScreen ? 1 : 2} gap="6.4rem">
+            <Grid
+                col={mobileScreen ? 1 : 2}
+                gap={mobileScreen ? "4.8rem" : "6.4rem"}>
                 {imageSide === "left" && imageBox}
                 <div className={styles.stepTextBox}>
                     <p className={styles.stepNumber}>{stepNumber}</p>
