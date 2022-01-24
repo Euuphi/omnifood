@@ -41,7 +41,13 @@
 
 /* Small Tablets - Below 944px */
 @media (max-width: 59em) {
+    .ctaForm input,
+    .ctaForm select {
+        padding: 2.4rem 1.6rem;
+    }
+
     .btnForm {
         margin-top: 1.2rem;
+        padding: 3rem 1.6rem;
     }
 }

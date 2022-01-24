@@ -41,6 +41,8 @@
     box-shadow: inset 0 0 0 3px #fff;
 }
 
+/* Mobile - Below 544px */
+
 @media (max-width: 34em) {
     .btn,
     .btn:link,

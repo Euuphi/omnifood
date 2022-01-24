@@ -38,3 +38,14 @@
     background-size: cover;
     height: 100%;
 }
+
+@media (max-width: 34em) {
+    .ctaTextBox {
+        padding: 3.2rem;
+    }
+
+    .ctaImageBox {
+        grid-row: 1;
+        height: 36rem;
+    }
+}
