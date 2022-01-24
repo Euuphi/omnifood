@@ -11,7 +11,7 @@ import MobileNavButton from "./MobileNavButton";
 
 const MainNav = () => {
     // Media Queries
-    const smallTabletScreen = useMediaQuery("(max-width: 59em");
+    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
 
     // States
     const [mobileNav, setMobileNav] = useState(smallTabletScreen);
