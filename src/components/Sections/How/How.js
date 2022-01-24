@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 
 // Images
 import appScreenOne from "../../../images/app/app-screen-1.png";
@@ -17,6 +18,9 @@ import SectionHeading from "../../Headings/SectionHeading";
 import Step from "./Step";
 
 const How = () => {
+    // Media Queries
+    const mobileScreen = useMediaQuery("(max-width: 34em)");
+
     return (
         <section id="howSection" className={styles.sectionHow}>
             <SectionHeading
@@ -27,7 +31,7 @@ const How = () => {
             <Flex flexDirection="column">
                 <Step
                     stepNumber="01"
-                    imageSide="right"
+                    imageSide={mobileScreen ? "left" : "right"}
                     imageSrc={appScreenOne}
                     imageAlt="iPhone app preferences selection screen"
                     heading="Tell us what you like (and don't like)"
@@ -45,7 +49,7 @@ const How = () => {
 
                 <Step
                     stepNumber="03"
-                    imageSide="right"
+                    imageSide={mobileScreen ? "left" : "right"}
                     imageSrc={appScreenThree}
                     imageAlt=""
                     heading="Receive meals at convenient time"

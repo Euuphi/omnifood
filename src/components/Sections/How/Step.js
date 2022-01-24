@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 
 // Stylesheets
 import styles from "./Step.module.css";
@@ -34,9 +35,12 @@ const Step = ({
         </div>
     );
 
+    // Media Queries
+    const mobileScreen = useMediaQuery("(max-width: 34em)");
+
     return (
         <Container>
-            <Grid col={2} gap="6.4rem">
+            <Grid col={mobileScreen ? 1 : 2} gap="6.4rem">
                 {imageSide === "left" && imageBox}
                 <div className={styles.stepTextBox}>
                     <p className={styles.stepNumber}>{stepNumber}</p>
