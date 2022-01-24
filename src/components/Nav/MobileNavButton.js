@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // Stylesheets
 import styles from "./MobileNavButton.module.css";
