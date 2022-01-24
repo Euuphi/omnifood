@@ -64,6 +64,7 @@
         75em: 1200px (Large Tablet)
         59em: 944px (Small Tablet)
         47em: 752px (Mini Tablet)
+        34em: 544px (Mobile)
 */
 
 * {
@@ -102,6 +103,10 @@ strong {
 a {
     display: inline-block;
     text-decoration: none;
+}
+
+.margin-bottom-md {
+    margin-bottom: 2.4rem !important;
 }
 
 .margin-right-sm {

@@ -23,12 +23,24 @@ const Hero = () => {
     // Media Queries
     const laptopScreen = useMediaQuery("(max-width: 84em)");
     const smallTabletScreen = useMediaQuery("(max-width: 59em");
+    const mobileScreen = useMediaQuery("(max-width: 34em)");
+
+    // Function to calculate section padding based on media queries
+    const calculatePadding = () => {
+        if (mobileScreen) {
+            return "0 3.2rem";
+        } else if (smallTabletScreen) {
+            return "0 8rem";
+        } else {
+            return "0 3.2rem";
+        }
+    };
 
     return (
         <section className={styles.sectionHero}>
             <Container
                 maxWidth={laptopScreen ? "120rem" : "130rem"}
-                padding={smallTabletScreen ? "0 8rem" : "0 3.2rem"}>
+                padding={calculatePadding()}>
                 <Grid col={smallTabletScreen ? 1 : 2} alignItems="center">
                     <div className={styles.heroTextBox}>
                         <HeadingPrimary>
@@ -42,13 +54,17 @@ const Hero = () => {
                         </p>
                         <Button
                             href="#"
-                            className="margin-right-sm"
+                            className={`margin-right-sm ${
+                                smallTabletScreen && "margin-bottom-md"
+                            }`}
                             text="Start eating well"
                             preStyle="full"
                         />
                         <Button
                             href="#"
-                            className="margin-right-sm"
+                            className={`${
+                                smallTabletScreen && "margin-bottom-md"
+                            }`}
                             text="Learn more &darr;"
                             preStyle="outline"
                         />

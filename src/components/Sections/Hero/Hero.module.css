@@ -55,7 +55,7 @@
 
     .deliveredMeals {
         justify-content: center;
-        margin-top: 3.2rem;
+        margin-top: 2.4rem;
     }
 
     .heroImageBox {
@@ -63,6 +63,19 @@
     }
 
     .heroImage {
-        width: 60%;
+        margin-top: 3.2rem;
+        width: 90%;
+    }
+}
+
+/* Mobile - Below 544px */
+
+@media (max-width: 34em) {
+    .sectionHero {
+        padding: 2.4rem 0 6.4rem 0;
+    }
+
+    .heroImage {
+        width: 80%;
     }
 }
