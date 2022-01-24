@@ -40,7 +40,10 @@ const Gallery = () => {
     };
 
     return (
-        <Grid col={calculateCols()} gap="1.6rem" padding="1.6rem">
+        <Grid
+            col={calculateCols()}
+            gap={mobileScreen ? "1.2rem" : "1.6rem"}
+            padding="1.6rem">
             <GalleryItem
                 imageSrc={galleryOne}
                 imageAlt="Beautifully arranged food"

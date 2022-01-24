@@ -21,7 +21,10 @@ const Testimonials = () => {
 
     // Function to calculate padding for testimonials
     const calculatePadding = () => {
-        if (smallTabletScreen) {
+        if (mobileScreen) {
+            // Padding for mobile
+            return "4.8rem";
+        } else if (smallTabletScreen) {
             // Padding for small tablet
             return "9.6rem";
         } else if (largeTabletScreen) {
