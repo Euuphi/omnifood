@@ -29,3 +29,10 @@
         height: 2.4rem;
     }
 }
+
+/* Mobile - Below 544px */
+@media (max-width: 34em) {
+    .logos img {
+        height: 1.2rem;
+    }
+}
