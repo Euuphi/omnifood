@@ -3,33 +3,33 @@ import React from "react";
 // Stylesheets
 import styles from "./NavMenu.module.css";
 
-const NavMenu = () => {
+const NavMenu = ({ onClick }) => {
     return (
         <nav className={styles.mainNav}>
             <ul className={styles.mainNavList}>
-                <li className={styles.mainNavListItem}>
+                <li className={styles.mainNavListItem} onClick={onClick}>
                     <a className={styles.mainNavLink} href="#howSection">
                         How It Works
                     </a>
                 </li>
-                <li className={styles.mainNavListItem}>
+                <li className={styles.mainNavListItem} onClick={onClick}>
                     <a className={styles.mainNavLink} href="#mealsSection">
                         Meals
                     </a>
                 </li>
-                <li className={styles.mainNavListItem}>
+                <li className={styles.mainNavListItem} onClick={onClick}>
                     <a
                         className={styles.mainNavLink}
                         href="#testimonialsSection">
                         Testimonials
                     </a>
                 </li>
-                <li className={styles.mainNavListItem}>
+                <li className={styles.mainNavListItem} onClick={onClick}>
                     <a className={styles.mainNavLink} href="#pricingSection">
                         Pricing
                     </a>
                 </li>
-                <li className={styles.mainNavListItem}>
+                <li className={styles.mainNavListItem} onClick={onClick}>
                     <a
                         className={`${styles.mainNavLink} ${styles.navCta}`}
                         href="#ctaSection">

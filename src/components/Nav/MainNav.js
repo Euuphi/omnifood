@@ -30,6 +30,10 @@ const MainNav = () => {
         });
     };
 
+    const navLinkClickHandler = () => {
+        setMenuOpen(false);
+    };
+
     return (
         <header className={styles.header}>
             <Logo />
@@ -39,10 +43,10 @@ const MainNav = () => {
                         menuOpen={menuOpen}
                         onClick={clickHandler}
                     />
-                    {menuOpen && <NavMenu />}
+                    {menuOpen && <NavMenu onClick={navLinkClickHandler} />}
                 </>
             ) : (
-                <NavMenu />
+                <NavMenu onClick={navLinkClickHandler} />
             )}
         </header>
     );
