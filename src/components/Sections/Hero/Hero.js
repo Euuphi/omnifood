@@ -60,6 +60,7 @@ const Hero = () => {
                             } ${buttonStyles.btnFull} ${
                                 smallTabletScreen && "margin-bottom-md"
                             }`}
+                            offset={-96}
                             smooth>
                             Start eating well
                         </Link>
@@ -68,6 +69,7 @@ const Hero = () => {
                             className={`${buttonStyles.btn} ${
                                 buttonStyles.btnOutline
                             } ${smallTabletScreen && "margin-bottom-md"}`}
+                            offset={-30}
                             smooth>
                             Learn more &darr;
                         </Link>

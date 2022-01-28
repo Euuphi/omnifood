@@ -12,6 +12,7 @@ const NavMenu = ({ onClick }) => {
                     <Link
                         to="howSection"
                         className={styles.mainNavLink}
+                        offset={-30}
                         onClick={onClick}
                         smooth>
                         How It Works
@@ -21,6 +22,7 @@ const NavMenu = ({ onClick }) => {
                     <Link
                         to="mealsSection"
                         className={styles.mainNavLink}
+                        offset={-30}
                         onClick={onClick}
                         smooth>
                         Meals
@@ -30,6 +32,7 @@ const NavMenu = ({ onClick }) => {
                     <Link
                         to="testimonialsSection"
                         className={styles.mainNavLink}
+                        offset={-30}
                         onClick={onClick}
                         smooth>
                         Testimonials
@@ -39,6 +42,7 @@ const NavMenu = ({ onClick }) => {
                     <Link
                         to="pricingSection"
                         className={styles.mainNavLink}
+                        offset={-30}
                         onClick={onClick}
                         smooth>
                         Pricing
