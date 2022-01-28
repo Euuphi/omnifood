@@ -11,6 +11,8 @@
 .sticky {
     position: sticky;
     bottom: 0;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+    height: 8rem;
     top: 0;
     width: 100%;
     z-index: 100;
