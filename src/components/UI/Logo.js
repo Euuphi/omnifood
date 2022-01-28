@@ -1,4 +1,5 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 
 // Images
 import logo from "../../images/omnifood-logo.png";
@@ -15,9 +16,11 @@ import styles from "./Logo.module.css";
 
 const Logo = ({ className }) => {
     return (
-        <a className={className} href="#">
+        <button
+            className={`${styles.btnLogo} ${className}`}
+            onClick={scroll.scrollToTop}>
             <img src={logo} className={styles.logo} alt="Omnifood logo" />
-        </a>
+        </button>
     );
 };
 
