@@ -12,12 +12,13 @@ import customerSix from "../../../images/customers/customer-6.jpg";
 
 // Styles
 import styles from "./Hero.module.css";
+import buttonStyles from "../../UI/Button.module.css";
 
 // Components
 import Container from "../../Layout/Container";
 import Grid from "../../Layout/Grid";
 import HeadingPrimary from "../../Headings/HeadingPrimary";
-import Button from "../../UI/Button";
+import { Link } from "react-scroll";
 
 const Hero = () => {
     // Media Queries
@@ -52,22 +53,24 @@ const Hero = () => {
                             will make you eat healthy again. Tailored to your
                             personal tastes and nutritional needs.
                         </p>
-                        <Button
-                            href="#ctaSection"
-                            className={`margin-right-sm ${
+                        <Link
+                            to="ctaSection"
+                            className={`${"margin-right-sm"} ${
+                                buttonStyles.btn
+                            } ${buttonStyles.btnFull} ${
                                 smallTabletScreen && "margin-bottom-md"
                             }`}
-                            text="Start eating well"
-                            preStyle="full"
-                        />
-                        <Button
-                            href="#howSection"
-                            className={`${
-                                smallTabletScreen && "margin-bottom-md"
-                            }`}
-                            text="Learn more &darr;"
-                            preStyle="outline"
-                        />
+                            smooth>
+                            Start eating well
+                        </Link>
+                        <Link
+                            to="howSection"
+                            className={`${buttonStyles.btn} ${
+                                buttonStyles.btnOutline
+                            } ${smallTabletScreen && "margin-bottom-md"}`}
+                            smooth>
+                            Learn more &darr;
+                        </Link>
                         <div className={styles.deliveredMeals}>
                             <div className={styles.deliveredImages}>
                                 <img

@@ -28,13 +28,13 @@
     background-color: #cf711f;
 }
 
+.btnOutline,
 .btnOutline:link,
 .btnOutline:visited {
     background-color: #fff;
     color: #555;
 }
 
-.btnOutline,
 .btnOutline:hover,
 .btnOutline:active {
     background-color: #fdf2e9;
