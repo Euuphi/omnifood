@@ -9,7 +9,14 @@ import Logo from "../UI/Logo";
 import NavMenu from "./NavMenu";
 import MobileNavButton from "./MobileNavButton";
 
-const MainNav = () => {
+/**
+ * Create main header element
+ *
+ * @param {boolean} isSticky - Specify if nav will stick to viewport
+ * @return {*}
+ */
+
+const MainNav = ({ isSticky }) => {
     // Media Queries
     const smallTabletScreen = useMediaQuery("(max-width: 59em)");
 
@@ -32,7 +39,7 @@ const MainNav = () => {
     };
 
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${isSticky && styles.sticky}`}>
             <Logo />
             {mobileNav ? (
                 <>

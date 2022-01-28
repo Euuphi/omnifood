@@ -20,7 +20,7 @@ import Grid from "../../Layout/Grid";
 import HeadingPrimary from "../../Headings/HeadingPrimary";
 import { Link } from "react-scroll";
 
-const Hero = () => {
+const Hero = ({ sectionRef }) => {
     // Media Queries
     const laptopScreen = useMediaQuery("(max-width: 84em)");
     const smallTabletScreen = useMediaQuery("(max-width: 59em");
@@ -38,7 +38,7 @@ const Hero = () => {
     };
 
     return (
-        <section className={styles.sectionHero}>
+        <section className={styles.sectionHero} ref={sectionRef}>
             <Container
                 maxWidth={laptopScreen ? "120rem" : "130rem"}
                 padding={calculatePadding()}>

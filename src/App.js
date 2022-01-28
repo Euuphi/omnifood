@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 // Landing Page Section Components
 import MainNav from "./components/Nav/MainNav";
@@ -12,11 +12,35 @@ import CTA from "./components/Sections/CTA/CTA";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+    // ----- Refs ----- //
+    // Ref to hero section
+    const heroRef = useRef();
+
+    // ----- States ----- //
+    // State to track visibilty of hero section in the viewport
+    const [heroVisible, setHeroVisible] = useState(true);
+
+    // Effect to set and track visibility of hero section in the viewport
+    useEffect(() => {
+        const heroObserver = new IntersectionObserver(
+            (entries) => {
+                const [entry] = entries;
+                setHeroVisible(entry.isIntersecting);
+            },
+            {
+                root: null,
+                threshold: 0,
+            }
+        );
+
+        if (heroRef.current) heroObserver.observe(heroRef.current);
+    }, [heroRef]);
+
     return (
         <Fragment>
-            <MainNav />
+            <MainNav isSticky={!heroVisible} />
             <main>
-                <Hero />
+                <Hero sectionRef={heroRef} />
                 <Featured />
                 <How />
                 <Meals />
