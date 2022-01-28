@@ -41,7 +41,7 @@ const Pricing = () => {
 
     return (
         <section id="pricingSection" className={styles.sectionPricing}>
-            <Container marginTop="9.6rem">
+            <Container>
                 <SectionHeading
                     subheading="Pricing"
                     secondaryHeading="Eating well without breaking the bank"
