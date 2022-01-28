@@ -53,7 +53,7 @@ const Hero = () => {
                             personal tastes and nutritional needs.
                         </p>
                         <Button
-                            href="#"
+                            href="#ctaSection"
                             className={`margin-right-sm ${
                                 smallTabletScreen && "margin-bottom-md"
                             }`}
@@ -61,7 +61,7 @@ const Hero = () => {
                             preStyle="full"
                         />
                         <Button
-                            href="#"
+                            href="#howSection"
                             className={`${
                                 smallTabletScreen && "margin-bottom-md"
                             }`}
