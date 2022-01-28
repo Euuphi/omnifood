@@ -24,7 +24,7 @@ const CtaForm = () => {
         <form className={styles.ctaForm} onSubmit={submitHandler}>
             <Grid col={smallTabletScreen ? 1 : 2} gap="2.4rem 3.2rem">
                 <div>
-                    <label for="name">Full Name</label>
+                    <label htmlFor="name">Full Name</label>
                     <input
                         id="name"
                         type="text"
@@ -36,7 +36,7 @@ const CtaForm = () => {
                 </div>
 
                 <div>
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input
                         id="email"
                         type="email"
@@ -48,7 +48,9 @@ const CtaForm = () => {
                 </div>
 
                 <div>
-                    <label for="selectWhere">Where did you hear from us?</label>
+                    <label htmlFor="selectWhere">
+                        Where did you hear from us?
+                    </label>
                     <select
                         id="selectWhere"
                         required
