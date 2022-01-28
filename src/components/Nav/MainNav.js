@@ -20,6 +20,7 @@ const MainNav = () => {
     // Effect to set initial nav state
     useEffect(() => {
         setMobileNav(smallTabletScreen);
+        setMenuOpen(false);
     }, [smallTabletScreen]);
 
     // Function to handle click for MobileNavButton component
@@ -28,10 +29,6 @@ const MainNav = () => {
         setMenuOpen((prevState) => {
             return !prevState;
         });
-    };
-
-    const navLinkClickHandler = () => {
-        setMenuOpen(false);
     };
 
     return (
@@ -43,10 +40,10 @@ const MainNav = () => {
                         menuOpen={menuOpen}
                         onClick={clickHandler}
                     />
-                    {menuOpen && <NavMenu onClick={navLinkClickHandler} />}
+                    {menuOpen && <NavMenu onClick={clickHandler} />}
                 </>
             ) : (
-                <NavMenu onClick={navLinkClickHandler} />
+                <NavMenu onClick={clickHandler} />
             )}
         </header>
     );
