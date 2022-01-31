@@ -30,6 +30,14 @@ const MainNav = ({ isSticky }) => {
         setMenuOpen(false);
     }, [smallTabletScreen]);
 
+    // Effect to add scroll event listener when component is first loaded
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            // Close mobile navigation menu when scroll is detected
+            setMenuOpen(false);
+        });
+    }, []);
+
     // Function to handle click for MobileNavButton component
     const clickHandler = () => {
         // Reverse boolean value of menuOpen
@@ -39,7 +47,10 @@ const MainNav = ({ isSticky }) => {
     };
 
     return (
-        <header className={`${styles.header} ${isSticky && styles.sticky}`}>
+        <header
+            className={`${styles.header} ${
+                (isSticky || menuOpen) && styles.sticky
+            }`}>
             <Logo />
             {mobileNav && (
                 <MobileNavButton menuOpen={menuOpen} onClick={clickHandler} />
