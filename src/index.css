@@ -80,6 +80,7 @@
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
 
     /* CSS global variables */
     --color-primary: #e67e22;

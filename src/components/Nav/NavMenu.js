@@ -4,9 +4,9 @@ import { Link } from "react-scroll";
 // Stylesheets
 import styles from "./NavMenu.module.css";
 
-const NavMenu = ({ onClick }) => {
+const NavMenu = ({ onClick, menuOpen }) => {
     return (
-        <nav className={styles.mainNav}>
+        <nav className={`${styles.mainNav} ${menuOpen ? styles.open : ""}`}>
             <ul className={styles.mainNavList}>
                 <li>
                     <Link

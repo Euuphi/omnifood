@@ -33,9 +33,10 @@
     background-color: #cf711f;
 }
 
+/* Small Tablet (Portrait) - Below 944px */
 @media (max-width: 59em) {
     .mainNav {
-        background-color: #fff;
+        background-color: var(--color-tint-light);
         position: absolute;
         top: 0;
         left: 0;
@@ -47,9 +48,11 @@
         justify-content: center;
 
         /* Hiding mainNav */
-        /* opacity: 0;
+        opacity: 0;
         pointer-events: none;
-        visibility: hidden; */
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: all 400ms;
     }
 
     .mainNavList {
@@ -58,5 +61,12 @@
 
     .mainNavLink {
         font-size: 3rem;
+    }
+
+    .open {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
     }
 }

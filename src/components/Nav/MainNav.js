@@ -41,17 +41,10 @@ const MainNav = ({ isSticky }) => {
     return (
         <header className={`${styles.header} ${isSticky && styles.sticky}`}>
             <Logo />
-            {mobileNav ? (
-                <>
-                    <MobileNavButton
-                        menuOpen={menuOpen}
-                        onClick={clickHandler}
-                    />
-                    {menuOpen && <NavMenu onClick={clickHandler} />}
-                </>
-            ) : (
-                <NavMenu onClick={clickHandler} />
+            {mobileNav && (
+                <MobileNavButton menuOpen={menuOpen} onClick={clickHandler} />
             )}
+            <NavMenu menuOpen={menuOpen} onClick={clickHandler} />
         </header>
     );
 };
