@@ -2,7 +2,8 @@ import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 // Images
-import hero from "../../../images/hero.png";
+import heroPng from "../../../images/hero.png";
+import heroWebp from "../../../images/hero.webp";
 import customerOne from "../../../images/customers/customer-1.jpg";
 import customerTwo from "../../../images/customers/customer-2.jpg";
 import customerThree from "../../../images/customers/customer-3.jpg";
@@ -113,11 +114,14 @@ const Hero = ({ sectionRef }) => {
                         </div>
                     </div>
                     <div className={styles.heroImageBox}>
-                        <img
-                            src={hero}
-                            className={styles.heroImage}
-                            alt="Woman enjoying food, meals in storage container and food bowls on a table"
-                        />
+                        <picture>
+                            <source srcSet={heroWebp} type="image/webp" />
+                            <source srcSet={heroPng} type="image/png" />
+                            <img
+                                className={styles.heroImage}
+                                alt="Woman enjoying food, meals in storage container and food bowls on a table"
+                            />
+                        </picture>
                     </div>
                 </Grid>
             </Container>
