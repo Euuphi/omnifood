@@ -35,17 +35,23 @@ const Footer = () => {
                         <Logo className={styles.footerLogo} />
                         <ul className={styles.socialLinks}>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a
+                                    className={styles.footerLink}
+                                    href="http://instagram.com">
                                     <IoLogoInstagram size="2.4rem" />
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a
+                                    className={styles.footerLink}
+                                    href="http://facebook.com">
                                     <IoLogoFacebook size="2.4rem" />
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a
+                                    className={styles.footerLink}
+                                    href="http://twitter.com">
                                     <IoLogoTwitter size="2.4rem" />
                                 </a>
                             </li>
@@ -80,22 +86,24 @@ const Footer = () => {
                         <p className={styles.footerHeading}>Account</p>
                         <ul className={styles.footerNav}>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a className={styles.footerLink} href="/signup">
                                     Create Account
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a className={styles.footerLink} href="/signin">
                                     Sign In
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a className={styles.footerLink} href="/ios">
                                     iOS App
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a
+                                    className={styles.footerLink}
+                                    href="/android">
                                     Android App
                                 </a>
                             </li>
@@ -105,22 +113,28 @@ const Footer = () => {
                         <p className={styles.footerHeading}>Company</p>
                         <ul className={styles.footerNav}>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a className={styles.footerLink} href="/about">
                                     About Omnifood
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a
+                                    className={styles.footerLink}
+                                    href="/business">
                                     For Business
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a
+                                    className={styles.footerLink}
+                                    href="/partners">
                                     Cooking Partners
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a
+                                    className={styles.footerLink}
+                                    href="/careers">
                                     Careers
                                 </a>
                             </li>
@@ -130,17 +144,21 @@ const Footer = () => {
                         <p className={styles.footerHeading}>Resources</p>
                         <ul className={styles.footerNav}>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a
+                                    className={styles.footerLink}
+                                    href="/recipes">
                                     Recipe directory
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a className={styles.footerLink} href="/help">
                                     Help center
                                 </a>
                             </li>
                             <li>
-                                <a className={styles.footerLink} href="#">
+                                <a
+                                    className={styles.footerLink}
+                                    href="/privacy">
                                     Privacy & terms
                                 </a>
                             </li>
