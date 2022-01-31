@@ -71,7 +71,7 @@ const Pricing = () => {
             <Container marginBottom="9.6rem">
                 <aside className={styles.planDetails}>
                     Prices include all applicable taxes. Users can cancel at any
-                    time. Both plans include the follow:
+                    time. Both plans include the following:
                 </aside>
             </Container>
 
