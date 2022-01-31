@@ -52,10 +52,17 @@ const MainNav = ({ isSticky }) => {
                 (isSticky || menuOpen) && styles.sticky
             }`}>
             <Logo />
-            {mobileNav && (
-                <MobileNavButton menuOpen={menuOpen} onClick={clickHandler} />
+            {mobileNav ? (
+                <>
+                    <MobileNavButton
+                        menuOpen={menuOpen}
+                        onClick={clickHandler}
+                    />
+                    <NavMenu menuOpen={menuOpen} onClick={clickHandler} />
+                </>
+            ) : (
+                <NavMenu menuOpen={menuOpen} onClick={clickHandler} />
             )}
-            <NavMenu menuOpen={menuOpen} onClick={clickHandler} />
         </header>
     );
 };
