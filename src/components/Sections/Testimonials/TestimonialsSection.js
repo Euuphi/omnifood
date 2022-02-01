@@ -10,7 +10,7 @@ import Testimonials from "./Testimonials";
 import Gallery from "./Gallery";
 
 const TestimonialsSection = () => {
-    const smallTabletScreen = useMediaQuery("(max-width: 59em");
+    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
 
     return (
         <section

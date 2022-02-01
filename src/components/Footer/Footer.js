@@ -19,7 +19,7 @@ import Logo from "../UI/Logo";
 const Footer = () => {
     // Media Queries
     const largeTabletScreen = useMediaQuery("(max-width: 75em)");
-    const miniTabletScreen = useMediaQuery("(max-width: 47em");
+    const miniTabletScreen = useMediaQuery("(max-width: 47em)");
 
     // Get date for copy right text
     const copyrightDate = new Date().getFullYear();

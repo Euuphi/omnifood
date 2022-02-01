@@ -1,5 +1,5 @@
 import React from "react";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { useMediaQuery } from "@mui/material";
 
 // Images
 import heroPng from "../../../images/hero.png";
@@ -32,7 +32,7 @@ import { Link } from "react-scroll";
 const Hero = ({ isSticky, sectionRef }) => {
     // Media Queries
     const laptopScreen = useMediaQuery("(max-width: 84em)");
-    const smallTabletScreen = useMediaQuery("(max-width: 59em");
+    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
     const mobileScreen = useMediaQuery("(max-width: 34em)");
 
     // Function to calculate section padding based on media queries

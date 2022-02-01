@@ -13,7 +13,7 @@ const CtaForm = () => {
     const [email, setEmail] = useState("");
     const [select, setSelect] = useState("");
 
-    const smallTabletScreen = useMediaQuery("(max-width: 59em");
+    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
 
     const submitHandler = (event) => {
         event.preventDefault();
