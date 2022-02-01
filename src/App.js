@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
+// Contexts
+import { MediaQProvider } from "./context/MediaQContext";
+
 // Landing Page Section Components
 import MainNav from "./components/Nav/MainNav";
 import Hero from "./components/Sections/Hero/Hero";
@@ -40,19 +43,21 @@ function App() {
     }, [heroRef]);
 
     return (
-        <MobileOverflowWrapper>
-            <MainNav isSticky={!heroVisible} />
-            <main>
-                <Hero isSticky={!heroVisible} sectionRef={heroRef} />
-                <Featured />
-                <How />
-                <Meals />
-                <TestimonialsSection />
-                <Pricing />
-                <CTA />
-            </main>
-            <Footer />
-        </MobileOverflowWrapper>
+        <MediaQProvider>
+            <MobileOverflowWrapper>
+                <MainNav isSticky={!heroVisible} />
+                <main>
+                    <Hero isSticky={!heroVisible} sectionRef={heroRef} />
+                    <Featured />
+                    <How />
+                    <Meals />
+                    <TestimonialsSection />
+                    <Pricing />
+                    <CTA />
+                </main>
+                <Footer />
+            </MobileOverflowWrapper>
+        </MediaQProvider>
     );
 }
 
