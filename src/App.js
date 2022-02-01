@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Landing Page Section Components
 import MainNav from "./components/Nav/MainNav";
@@ -10,6 +10,9 @@ import TestimonialsSection from "./components/Sections/Testimonials/Testimonials
 import Pricing from "./components/Sections/Pricing/Pricing";
 import CTA from "./components/Sections/CTA/CTA";
 import Footer from "./components/Footer/Footer";
+
+// Layout Components
+import MobileOverflowWrapper from "./components/Layout/MobileOverflowWrapper";
 
 function App() {
     // ----- Refs ----- //
@@ -37,10 +40,10 @@ function App() {
     }, [heroRef]);
 
     return (
-        <Fragment>
+        <MobileOverflowWrapper>
             <MainNav isSticky={!heroVisible} />
             <main>
-                <Hero sectionRef={heroRef} />
+                <Hero isSticky={!heroVisible} sectionRef={heroRef} />
                 <Featured />
                 <How />
                 <Meals />
@@ -49,7 +52,7 @@ function App() {
                 <CTA />
             </main>
             <Footer />
-        </Fragment>
+        </MobileOverflowWrapper>
     );
 }
 

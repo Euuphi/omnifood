@@ -21,7 +21,15 @@ import Grid from "../../Layout/Grid";
 import HeadingPrimary from "../../Headings/HeadingPrimary";
 import { Link } from "react-scroll";
 
-const Hero = ({ sectionRef }) => {
+/**
+ *
+ *
+ * @param {boolean} isSticky - Tracks when page header will become sticky
+ * @param {*} sectionRef - Ref for hero section component
+ * @return {*}
+ */
+
+const Hero = ({ isSticky, sectionRef }) => {
     // Media Queries
     const laptopScreen = useMediaQuery("(max-width: 84em)");
     const smallTabletScreen = useMediaQuery("(max-width: 59em");
@@ -42,6 +50,8 @@ const Hero = ({ sectionRef }) => {
         <section className={styles.sectionHero} ref={sectionRef}>
             <Container
                 maxWidth={laptopScreen ? "120rem" : "130rem"}
+                // Set margin top to offset header switching to fixed position
+                marginTop={isSticky ? "9.6rem" : "0"}
                 padding={calculatePadding()}>
                 <Grid col={smallTabletScreen ? 1 : 2} alignItems="center">
                     <div className={styles.heroTextBox}>
