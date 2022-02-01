@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Stylesheets
 import styles from "./Step.module.css";
@@ -36,7 +38,7 @@ const Step = ({
     );
 
     // Media Queries
-    const mobileScreen = useMediaQuery("(max-width: 34em)");
+    const { mobileScreen } = useContext(MediaQContext);
 
     return (
         <Container>

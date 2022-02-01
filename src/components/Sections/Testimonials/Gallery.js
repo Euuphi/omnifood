@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Images
 import galleryOne from "../../../images/gallery/gallery-1.jpg";
@@ -23,16 +25,16 @@ const Gallery = () => {
     //TODO: Look into creating carasoul for gallery on large tablet size
 
     // Media Queries
-    const largeTabletScreen = useMediaQuery("(max-width: 84em)");
-    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
-    const mobileScreen = useMediaQuery("(max-width: 34em)");
+    const { landscapeTabletScreen, portraitTabletScreen, mobileScreen } =
+        useContext(MediaQContext);
 
+    // Function to calculate number of column based on screen size
     const calculateCols = () => {
         if (mobileScreen) {
             return 4;
-        } else if (smallTabletScreen) {
+        } else if (portraitTabletScreen) {
             return 6;
-        } else if (largeTabletScreen) {
+        } else if (landscapeTabletScreen) {
             return 2;
         } else {
             return 3;
@@ -60,7 +62,7 @@ const Gallery = () => {
                 imageSrc={galleryFour}
                 imageAlt="Beautifully arranged food"
             />
-            {(largeTabletScreen && !smallTabletScreen) || (
+            {(landscapeTabletScreen && !portraitTabletScreen) || (
                 <GalleryItem
                     imageSrc={galleryFive}
                     imageAlt="Beautifully arranged food"
@@ -74,7 +76,7 @@ const Gallery = () => {
                 imageSrc={gallerySeven}
                 imageAlt="Beautifully arranged food"
             />
-            {(largeTabletScreen && !smallTabletScreen) || (
+            {(landscapeTabletScreen && !portraitTabletScreen) || (
                 <>
                     <GalleryItem
                         imageSrc={galleryEight}

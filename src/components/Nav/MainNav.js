@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext, useEffect, useState } from "react";
+
+// Contexts
+import { MediaQContext } from "../../context/MediaQContext";
 
 // Styles
 import styles from "./MainNav.module.css";
@@ -18,17 +20,17 @@ import MobileNavButton from "./MobileNavButton";
 
 const MainNav = ({ isSticky }) => {
     // Media Queries
-    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
+    const { portraitTabletScreen } = useContext(MediaQContext);
 
     // States
-    const [mobileNav, setMobileNav] = useState(smallTabletScreen);
+    const [mobileNav, setMobileNav] = useState(portraitTabletScreen);
     const [menuOpen, setMenuOpen] = useState(false);
 
     // Effect to set initial nav state
     useEffect(() => {
-        setMobileNav(smallTabletScreen);
+        setMobileNav(portraitTabletScreen);
         setMenuOpen(false);
-    }, [smallTabletScreen]);
+    }, [portraitTabletScreen]);
 
     // Effect to add scroll event listener when component is first loaded
     useEffect(() => {

@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Stylesheets
 import styles from "./TestimonialsSection.module.css";
@@ -10,14 +12,15 @@ import Testimonials from "./Testimonials";
 import Gallery from "./Gallery";
 
 const TestimonialsSection = () => {
-    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
+    // Media Queries
+    const { portraitTabletScreen } = useContext(MediaQContext);
 
     return (
         <section
             id="testimonialsSection"
             className={styles.sectionTestimonials}>
             <Grid
-                col={smallTabletScreen ? 1 : "55fr 45fr"}
+                col={portraitTabletScreen ? 1 : "55fr 45fr"}
                 gap="0"
                 alignItems="center">
                 <Testimonials />

@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Stylesheets
 import styles from "./CTA.module.css";
@@ -12,24 +14,23 @@ import CtaForm from "./CtaForm";
 
 const CTA = () => {
     // Media Queries
-    const largeTabletScreen = useMediaQuery("(max-width: 75em)");
-    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
-    const mobileScreen = useMediaQuery("(max-width: 34em)");
+    const { landscapeTabletScreen, portraitTabletScreen, mobileScreen } =
+        useContext(MediaQContext);
 
-    // Function to calculate margin-bottom of Container based on media queries
+    // Function to calculate margin-bottom of Container based on screen size
     const calculateMarginBottom = () => {
-        if (largeTabletScreen) {
+        if (landscapeTabletScreen) {
             return "9.6rem";
         } else {
             return "12.8rem";
         }
     };
 
-    // Function to calculate grid-template-column based on media queries
+    // Function to calculate grid-template-column based on screen size
     const calculateCols = () => {
         if (mobileScreen) {
             return 1;
-        } else if (smallTabletScreen) {
+        } else if (portraitTabletScreen) {
             return "3fr 2fr";
         } else {
             return "2fr 1fr";

@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Images
 import jpGyozas from "../../../images/meals/meal-1.jpg";
@@ -18,13 +20,13 @@ import Link from "../../UI/Link";
 
 const Meals = () => {
     // Media Queries
-    const miniTabletScreen = useMediaQuery("(max-width: 47em)");
-    const mobileScreen = useMediaQuery("(max-width: 34em)");
+    const { portraitTabletScreen, mobileScreen } = useContext(MediaQContext);
 
+    // Function to calculate number of columns based on screen size
     const calculateCols = () => {
         if (mobileScreen) {
             return 1;
-        } else if (miniTabletScreen) {
+        } else if (portraitTabletScreen) {
             return 2;
         } else {
             return 3;

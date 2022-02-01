@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../context/MediaQContext";
 
 // Stylesheets
 import styles from "./Footer.module.css";
@@ -18,8 +20,8 @@ import Logo from "../UI/Logo";
 
 const Footer = () => {
     // Media Queries
-    const largeTabletScreen = useMediaQuery("(max-width: 75em)");
-    const miniTabletScreen = useMediaQuery("(max-width: 47em)");
+    const { landscapeTabletScreen, portraitTabletScreen } =
+        useContext(MediaQContext);
 
     // Get date for copy right text
     const copyrightDate = new Date().getFullYear();
@@ -27,10 +29,12 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <Container
-                padding={`${largeTabletScreen ? "9.6rem" : "12.8rem"} 3.2rem`}>
+                padding={`${
+                    landscapeTabletScreen ? "9.6rem" : "12.8rem"
+                } 3.2rem`}>
                 <Grid
-                    col={miniTabletScreen ? 6 : "1.5fr 1.5fr 1fr 1fr 1fr"}
-                    gap={miniTabletScreen ? "8rem 4.8rem" : "4.8rem"}>
+                    col={portraitTabletScreen ? 6 : "1.5fr 1.5fr 1fr 1fr 1fr"}
+                    gap={portraitTabletScreen ? "8rem 4.8rem" : "4.8rem"}>
                     <div className={styles.logoCol}>
                         <Logo className={styles.footerLogo} />
                         <ul className={styles.socialLinks}>

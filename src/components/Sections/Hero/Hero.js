@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Images
 import heroPng from "../../../images/hero.png";
@@ -22,7 +24,7 @@ import HeadingPrimary from "../../Headings/HeadingPrimary";
 import { Link } from "react-scroll";
 
 /**
- *
+ * Returns JSX for hero section
  *
  * @param {boolean} isSticky - Tracks when page header will become sticky
  * @param {*} sectionRef - Ref for hero section component
@@ -31,15 +33,14 @@ import { Link } from "react-scroll";
 
 const Hero = ({ isSticky, sectionRef }) => {
     // Media Queries
-    const laptopScreen = useMediaQuery("(max-width: 84em)");
-    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
-    const mobileScreen = useMediaQuery("(max-width: 34em)");
+    const { laptopScreen, portraitTabletScreen, mobileScreen } =
+        useContext(MediaQContext);
 
     // Function to calculate section padding based on media queries
     const calculatePadding = () => {
         if (mobileScreen) {
             return "0 3.2rem";
-        } else if (smallTabletScreen) {
+        } else if (portraitTabletScreen) {
             return "0 8rem";
         } else {
             return "0 3.2rem";
@@ -53,7 +54,7 @@ const Hero = ({ isSticky, sectionRef }) => {
                 // Set margin top to offset header switching to fixed position
                 marginTop={isSticky ? "9.6rem" : "0"}
                 padding={calculatePadding()}>
-                <Grid col={smallTabletScreen ? 1 : 2} alignItems="center">
+                <Grid col={portraitTabletScreen ? 1 : 2} alignItems="center">
                     <div className={styles.heroTextBox}>
                         <HeadingPrimary>
                             A healthy meal delivered to your door, every single
@@ -69,7 +70,7 @@ const Hero = ({ isSticky, sectionRef }) => {
                             className={`${"margin-right-sm"} ${
                                 buttonStyles.btn
                             } ${buttonStyles.btnFull} ${
-                                smallTabletScreen && "margin-bottom-md"
+                                portraitTabletScreen && "margin-bottom-md"
                             }`}
                             offset={-96}
                             smooth>
@@ -79,7 +80,7 @@ const Hero = ({ isSticky, sectionRef }) => {
                             to="howSection"
                             className={`${buttonStyles.btn} ${
                                 buttonStyles.btnOutline
-                            } ${smallTabletScreen && "margin-bottom-md"}`}
+                            } ${portraitTabletScreen && "margin-bottom-md"}`}
                             offset={-30}
                             smooth>
                             Learn more &darr;

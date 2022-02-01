@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../context/MediaQContext";
 
 /**
  * Create a basic grid container
@@ -22,14 +24,16 @@ const Grid = ({
     justifyContent,
     padding,
 }) => {
+    // Media Queries
+    const { landscapeTabletScreen, portraitTabletScreen } =
+        useContext(MediaQContext);
+
     // Function to calculate and return gap value based on screen size
-    const largeTabletScreen = useMediaQuery("(max-width: 75em)");
-    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
     const calculateGap = () => {
-        if (smallTabletScreen) {
+        if (portraitTabletScreen) {
             // Gap for small tablet screen
             return "4.8rem";
-        } else if (largeTabletScreen) {
+        } else if (landscapeTabletScreen) {
             // Gap for large tablet screen
             return "6.4rem";
         } else {

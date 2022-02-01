@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Images
 import dave from "../../../images/customers/dave.jpg";
@@ -15,19 +17,18 @@ import TestimonialItem from "./TestimonialItem";
 
 const Testimonials = () => {
     // Media Queries
-    const largeTabletScreen = useMediaQuery("(max-width: 75em)");
-    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
-    const mobileScreen = useMediaQuery("(max-width: 34em)");
+    const { landscapeTabletScreen, portraitTabletScreen, mobileScreen } =
+        useContext(MediaQContext);
 
     // Function to calculate padding for testimonials
     const calculatePadding = () => {
         if (mobileScreen) {
             // Padding for mobile
             return "4.8rem";
-        } else if (smallTabletScreen) {
+        } else if (portraitTabletScreen) {
             // Padding for small tablet
             return "9.6rem";
-        } else if (largeTabletScreen) {
+        } else if (landscapeTabletScreen) {
             // Padding for large tablet
             return "4.8rem";
         } else {

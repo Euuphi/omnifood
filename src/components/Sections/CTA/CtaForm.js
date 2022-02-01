@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext, useState } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Stylesheets
 import styles from "./CtaForm.module.css";
@@ -9,11 +11,13 @@ import Grid from "../../Layout/Grid";
 import Button from "../../UI/Button";
 
 const CtaForm = () => {
+    // Media Queries
+    const { portraitTabletScreen } = useContext(MediaQContext);
+
+    // States for form input field values
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [select, setSelect] = useState("");
-
-    const smallTabletScreen = useMediaQuery("(max-width: 59em)");
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -22,7 +26,7 @@ const CtaForm = () => {
 
     return (
         <form className={styles.ctaForm} onSubmit={submitHandler}>
-            <Grid col={smallTabletScreen ? 1 : 2} gap="2.4rem 3.2rem">
+            <Grid col={portraitTabletScreen ? 1 : 2} gap="2.4rem 3.2rem">
                 <div>
                     <label htmlFor="name">Full Name</label>
                     <input

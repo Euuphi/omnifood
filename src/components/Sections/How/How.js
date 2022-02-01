@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Images
 import appScreenOne from "../../../images/app/app-screen-1.png";
@@ -19,7 +21,7 @@ import Step from "./Step";
 
 const How = () => {
     // Media Queries
-    const mobileScreen = useMediaQuery("(max-width: 34em)");
+    const { mobileScreen } = useContext(MediaQContext);
 
     return (
         <section id="howSection" className={styles.sectionHow}>

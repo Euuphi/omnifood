@@ -1,5 +1,7 @@
-import React from "react";
-import { useMediaQuery } from "@mui/material";
+import React, { useContext } from "react";
+
+// Contexts
+import { MediaQContext } from "../../../context/MediaQContext";
 
 // Stylesheets
 import styles from "./Pricing.module.css";
@@ -37,7 +39,19 @@ const Pricing = () => {
         "Get access to latest recipes",
     ];
 
-    const mobileScreen = useMediaQuery("(max-width: 34em)");
+    // Media Queries
+    const { smallTabletScreen, mobileScreen } = useContext(MediaQContext);
+
+    // Function to calculate number of columns based on screen size
+    const calculateCols = () => {
+        if (mobileScreen) {
+            return 1;
+        } else if (smallTabletScreen) {
+            return 2;
+        } else {
+            return 4;
+        }
+    };
 
     return (
         <section id="pricingSection" className={styles.sectionPricing}>
@@ -77,7 +91,7 @@ const Pricing = () => {
 
             <IconContext.Provider value={{ className: featureStyles.icon }}>
                 <Container>
-                    <Grid col={mobileScreen ? 1 : 4}>
+                    <Grid col={calculateCols()}>
                         <Feature
                             icon={<IoInfiniteOutline />}
                             title="Never cook again!"
