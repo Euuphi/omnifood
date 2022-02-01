@@ -33,7 +33,7 @@
     background-color: #cf711f;
 }
 
-/* Small Tablet (Portrait) - Below 944px */
+/* Portrait Tablet - Below 944px */
 @media (max-width: 59em) {
     .mainNav {
         background-color: var(--color-tint-light);

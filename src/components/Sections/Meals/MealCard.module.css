@@ -67,7 +67,7 @@
     background-color: #ffd43b;
 }
 
-/* Small Tablets - Below 944px */
+/* Portrait Tablet Tablets - Below 944px */
 @media (max-width: 59em) {
     .mealcontent {
         padding: 3.2rem;

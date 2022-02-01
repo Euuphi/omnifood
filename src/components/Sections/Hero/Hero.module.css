@@ -45,7 +45,7 @@
     color: #cf711f;
 }
 
-/* Small Tablet - 944px */
+/* Portrait Tablet - 944px */
 @media (max-width: 59em) {
     .heroTextBox {
         margin: 0 auto;

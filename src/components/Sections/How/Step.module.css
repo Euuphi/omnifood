@@ -44,7 +44,7 @@
     line-height: 1.8;
 }
 
-/* Small Tablets - Below 944px */
+/* Portrait Tablets - Below 944px */
 @media (max-width: 59em) {
     .stepNumber {
         font-size: 7.4rem;

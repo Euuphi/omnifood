@@ -42,7 +42,7 @@
     }
 }
 
-/* Large Tablet - Below 1200px */
+/* Landscape Tablet - Below 1200px */
 
 @media (max-width: 75em) {
     .headingSecondary {
@@ -54,7 +54,7 @@
     }
 }
 
-/* Mini Tablet - Below 752px */
+/* Small Tablet - Below 752px */
 
 @media (max-width: 47em) {
     .headingSecondary {

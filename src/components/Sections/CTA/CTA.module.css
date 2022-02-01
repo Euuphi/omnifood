@@ -39,6 +39,7 @@
     height: 100%;
 }
 
+/* Mobile - Below 544px */
 @media (max-width: 34em) {
     .ctaTextBox {
         padding: 3.2rem;

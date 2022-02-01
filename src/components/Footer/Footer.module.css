@@ -60,7 +60,7 @@
     color: #555;
 }
 
-/* Mini Tablet - Below 752px */
+/* Small Tablet - Below 752px */
 
 @media (max-width: 47em) {
     .nav {

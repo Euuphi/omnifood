@@ -60,11 +60,20 @@
         2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 --- Media Queries
-        84em: 1344px (Laptop)
-        75em: 1200px (Large Tablet)
-        59em: 944px (Small Tablet)
-        47em: 752px (Mini Tablet)
-        34em: 544px (Mobile)
+        84em: 1344px (Laptop) - 
+            @media (max-width: 84em)
+
+        75em: 1200px (Landscape Tablet) - 
+            @media (max-width: 75em)
+
+        59em: 944px (Portrait Tablet) - 
+            @media (max-width: 59em)
+
+        47em: 752px (Small Tablet) - 
+            @media (max-width: 47em)
+            
+        34em: 544px (Mobile) - 
+            @media (max-width: 34em)
 */
 
 * {
@@ -114,14 +123,14 @@ a {
     margin-right: 1.6rem !important;
 }
 
-/* Below 1200px (Landscape Tablet) */
+/* Landscape Tablet - Below 1200px */
 @media (max-width: 75em) {
     html {
         font-size: 56.25%;
     }
 }
 
-/* Below 944px (Tablet) */
+/* Portrait Tablet - Below 944px */
 @media (max-width: 59em) {
     html {
         font-size: 50%;
