@@ -23,10 +23,17 @@
     opacity: 50%;
 }
 
-/* Small Tablets - Below 944px */
+/* Portrait Tablet - Below 944px */
 @media (max-width: 59em) {
     .logos img {
         height: 2.4rem;
+    }
+}
+
+/* Small Tablet - Below 752px */
+@media (max-width: 47em) {
+    .logos img {
+        height: 1.8rem;
     }
 }
 

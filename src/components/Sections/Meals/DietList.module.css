@@ -1,4 +1,5 @@
-@media (max-width: 47em) {
+/* Portrait Tablet - Below 752px */
+@media (max-width: 59em) {
     .dietList {
         grid-column: 1 / -1;
         justify-self: center;
