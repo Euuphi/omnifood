@@ -24,7 +24,7 @@
 
 Build a website for Omnifood company to advertise and help their customers learn more about their product and services.
 
-### Screenshot
+### Screenshots
 
 ![](./screenshot.png)
 
