@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# Omnifood Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Links
 
-## Available Scripts
+-   Live Site URL: [Omnifood Website](https://reverent-kare-b299f0.netlify.app/)
+-   Code URL: [Github](https://github.com/Euuphi/omnifood)
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+-   [Overview](#overview)
+    -   [The Project](#the-project)
+    -   [Screenshots](#screenshots)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
+    -   [Useful resources](#useful-resources)
+-   [Author](#author)
+-   [Acknowledgments](#acknowledgments)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The Project
 
-### `npm test`
+Build a website for Omnifood company to advertise and help their customers learn more about their product and services.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](./screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## My process
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Built with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   [React](https://reactjs.org/) - JS Framework Library
+-   [CSS Modules](https://github.com/css-modules/css-modules) - For styles
+-   [React Scroll](https://www.npmjs.com/package/react-scroll) - For smooth scrolling on links
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   Flexbox
+-   CSS Grid
+-   Desktop-first workflow
 
-### `npm run eject`
+### What I learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   How to use an intersection observer in order to track visibility of a section within the viewport
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+// Ref to hero section
+const heroRef = useRef();
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+// State to track visibilty of hero section in the viewport
+const [heroVisible, setHeroVisible] = useState(true);
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+// Effect to set and track visibility of hero section in the viewport
+useEffect(() => {
+    const heroObserver = new IntersectionObserver(
+        (entries) => {
+            const [entry] = entries;
+            setHeroVisible(entry.isIntersecting);
+        },
+        {
+            root: null,
+            threshold: 0,
+        }
+    );
 
-## Learn More
+    if (heroRef.current) heroObserver.observe(heroRef.current);
+}, [heroRef]);
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   Use of CSS variables
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```css
+html {
+    /* CSS global variables */
+    --color-primary: #e67e22;
+    --color-shade: #cf711f;
+    --color-tint-light: #fdf2e9;
+}
 
-### Code Splitting
+.sectionHero {
+    background-color: var(--color-tint-light);
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-   How to fix horizontal overflow not being hidden on mobile. By wrapping the entire HTML body into a div with the css class:
 
-### Analyzing the Bundle Size
+```css
+.hidden {
+    overflow-x: hidden;
+    position: relative;
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-   How to use "role" and "aria-label" properties in order to use a div element as an image
 
-### Making a Progressive Web App
+```html
+<div
+    className="{styles.ctaImageBox}"
+    role="img"
+    aria-label="A woman enjoying food"
+></div>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+-   Use of select element in a form
 
-### Advanced Configuration
+```html
+<div>
+    <label htmlFor="selectWhere">
+        Where did you hear from us?
+    </label>
+    <select
+        id="selectWhere"
+        required
+        value={select}
+        onChange={(event) => setSelect(event.target.value)}>
+        <option value="">Please choose one option:</option>
+        <option value="friends">Friends and Family</option>
+        <option value="youtube">YouTube</option>
+        <option value="podcast">Podcast</option>
+        <option value="facebook">Facebook ad</option>
+        <option value="others">Others</option>
+    </select>
+</div>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Continued development
 
-### Deployment
+-   Continue to build on my understanding of CSS Grid and how to manipulate it's properties to create flexible page layouts
+-   Continue expanding my knowledge of various HTML elements and their implementaions and uses in semantic HTML markup
+-   More uses of intersection observers and how to use it along-side animations to create seemless transitions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Useful resources
 
-### `npm run build` fails to minify
+-   [Intersection Observer with React](https://dev.to/producthackers/intersection-observer-using-react-49ko) - Great resource on use of Intersection Observer with React Framework
+-   [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - Complete guide on understanding basics and advance uses of CSS Grid
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+
+-   Website - [Steven Nguyen](https://github.com/Euuphi)
+
+## Acknowledgments
+
+The design of this site comes from a project by Jonas Schmedtmann on his Udemy course: **Build Responsive Real-World Websites with HTML and CSS**. I have learned a lot trying to clone his design from basic HTML and CSS and translating it into my own React Application.
